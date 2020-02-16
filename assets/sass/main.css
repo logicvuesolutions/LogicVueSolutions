@@ -17,7 +17,6 @@ body, html {
   min-height: 100%; }
 
 body {
-  padding: 0 20px;
   font-size: 20px;
   line-height: 1.6;
   color: #0a0216;
@@ -42,14 +41,17 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: "Montserrat", Times New Roman, Serif;
-  font-weight: 800;
   margin: 20px 0 30px; }
 
 h1 {
   font-size: 300%;
+  font-weight: 800;
   letter-spacing: 2px; }
   h1 span.light {
     font-weight: 400; }
+
+h2 {
+  font-size: 300%; }
 
 p {
   margin-bottom: 20px; }
@@ -70,6 +72,7 @@ a {
     display: inline-block;
     height: auto;
     color: #fff;
+    font-size: 80%;
     margin: 20px 0;
     padding: 10px 30px;
     text-decoration: none;
@@ -126,15 +129,15 @@ hr {
   position: relative;
   top: 0;
   left: 0;
-  margin-top: 200px; }
+  margin-top: 150px; }
 
 blockquote {
-  width: 60%;
+  width: 80%;
+  display: block;
   margin: 20px 20px 20px 0;
-  border-left: 3px solid #0a0216;
-  font-style: italic;
-  padding: 20px 20px 10px;
-  float: left; }
+  border-left: 3px solid #ccba0d;
+  font-weight: bold;
+  padding: 20px 20px 10px; }
   blockquote .caption {
     font-size: 70%;
     margin: 20px 0 20px; }
@@ -214,34 +217,36 @@ blockquote {
             background: linear-gradient(42deg, #3232ff, #a20045); }
   #header a.menu-toggle {
     position: relative;
-    width: 30px;
-    top: 10px;
+    width: 35px;
+    top: 7px;
     display: inline-block; }
     #header a.menu-toggle span {
       width: 100%;
       height: 4px;
       background: #fff;
       border-radius: 20px;
-      margin: 5px 0;
+      margin: 4px 0;
       float: right; }
       #header a.menu-toggle span:first-of-type {
         width: 100%; }
       #header a.menu-toggle span:last-of-type {
-        width: 60%; }
+        width: 65%; }
     #header a.menu-toggle:hover span {
       background: #3232ff;
       background: -webkit-linear-gradient(42deg, #3232ff, #a20045);
       background: -o-linear-gradient(42deg, #3232ff, #a20045);
       background: -moz-linear-gradient(42deg, #3232ff, #a20045);
       background: linear-gradient(42deg, #3232ff, #a20045); }
+  #header.stuck {
+    background: #0a0216; }
 
 /* ==========================================
 	Individual Page Elements
 ========================================== */
 /* Homepage */
-body#home {
+body.home {
   color: #fff; }
-  body#home .bg {
+  body.home .bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -249,7 +254,7 @@ body#home {
     height: 100%;
     display: block;
     z-index: -1; }
-    body#home .bg .bg-overlay {
+    body.home .bg .bg-overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -257,7 +262,7 @@ body#home {
       height: 100%;
       z-index: 1;
       background: rgba(0, 0, 0, 0.75); }
-    body#home .bg .bg-video {
+    body.home .bg .bg-video {
       position: absolute;
       top: 0;
       left: 0;
@@ -269,6 +274,53 @@ body#home {
       background-size: cover;
       background-repeat: no-repeat;
       background-image: url("../images/background_placeholder.png"); }
+
+#solutions-menu {
+  position: relative;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: #3232ff;
+  background: -webkit-linear-gradient(42deg, #3232ff, #a20045);
+  background: -o-linear-gradient(42deg, #3232ff, #a20045);
+  background: -moz-linear-gradient(42deg, #3232ff, #a20045);
+  background: linear-gradient(42deg, #3232ff, #a20045); }
+  #solutions-menu ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom-color: transparent; }
+    #solutions-menu ul li {
+      display: inline-block;
+      font-size: 80%;
+      font-weight: 400;
+      -webkit-transition: all ease-in-out .2s;
+      -moz-transition: all ease-in-out .2s;
+      transition: all ease-in-out .2s; }
+      #solutions-menu ul li a {
+        display: block;
+        padding: 20px 30px;
+        color: #fff;
+        -webkit-transition: all ease-in-out .2s;
+        -moz-transition: all ease-in-out .2s;
+        transition: all ease-in-out .2s; }
+        #solutions-menu ul li a.active {
+          color: #0a0216;
+          font-weight: bold; }
+      #solutions-menu ul li:hover {
+        background: #fff; }
+      #solutions-menu ul li:hover > a {
+        color: #0a0216; }
+    #solutions-menu ul.nav-tabs a.nav-link {
+      border-radius: 0; }
+
+#solutions-content {
+  background: #fff;
+  padding: 50px 0;
+  color: #0a0216; }
 
 /* ==========================================
 	Responsive Styles

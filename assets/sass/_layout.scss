@@ -5,7 +5,7 @@
 
 /* Homepage */
 
-body#home{
+body.home{
 	color:$white;
 	
 	.bg{
@@ -34,6 +34,49 @@ body#home{
 			background-image:url('../images/background_placeholder.png');}
 	}
 }
+
+#solutions-menu{ 
+	position: relative;
+    display: block;
+	bottom:0; left:0;
+    width: 100%;
+	text-align:center;
+	@include lvs-gradient;
+		 
+	ul{
+		display:block;
+		list-style:none;
+		margin:0; padding:0;
+		border-bottom-color:$trans;
+
+		li{
+			display:inline-block; 
+			font-size:80%;
+			font-weight:400;
+			@include defaultTransition;
+
+			a{
+				display:block;
+				padding:20px 30px;
+				color:$white;
+				@include defaultTransition;
+				&.active{color:$black; font-weight:bold;}
+			}
+			
+			&:hover{background:$white;}
+			&:hover > a{color:$black;}
+		}
+		
+		&.nav-tabs a.nav-link{border-radius:0;}
+	}
+}
+
+#solutions-content{
+	background:$white;
+	padding:50px 0;
+	color:$black;
+}
+
 
 	
 
