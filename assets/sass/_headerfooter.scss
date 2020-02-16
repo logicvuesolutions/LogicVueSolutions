@@ -54,8 +54,8 @@
 	
 	a.menu-toggle{
 		position:relative;
-		width:30px;
-		top:10px;
+		width:35px;
+		top:7px;
 		display:inline-block;	
 			
 		span{
@@ -63,11 +63,11 @@
 			height:4px;
 			background:$white;
 			border-radius:20px;
-			margin:5px 0;
+			margin:4px 0;
 			float:right;
 
 			&:first-of-type{width:100%;}
-			&:last-of-type{width:60%;}
+			&:last-of-type{width:65%;}
 		}
 		
 		&:hover{
@@ -75,4 +75,6 @@
 		}
 	}
 
+	&.stuck{background:$black;}
+	
 }

@@ -1,14 +1,16 @@
 jQuery(function($){
 	
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > 50) { 
-			$('#header').css('background', 'rgba(10,2,22,1)');
-		}else{
-			$('#header').css('background', 'transparent');
-		}
-		
-	});
-    
+
+	
+	if( $('body').hasClass('home') ){
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 50) { 
+				$('#header').addClass('stuck');
+			}
+		});
+	}else{
+		$('#header').addClass('stuck');
+	}
 	
 	
 	$(document).ready(function(){});

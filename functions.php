@@ -28,7 +28,8 @@ if( function_exists('acf_add_options_page') ) {
 function register_my_menus() {
 	register_nav_menus(
 		array(
-			'header-menu' => __('Header Menu')
+			'header' => __('Header'),
+			'solutions' => __('Solutions')
 		)
 	);
 }

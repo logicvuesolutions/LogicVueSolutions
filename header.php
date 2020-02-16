@@ -48,8 +48,8 @@
 	
 	 <?php wp_head(); ?>
 </head>
-<body id="<?php if (is_front_page()) echo 'home'; ?>">
-	<div id="header" >	
+<body class="<?php if (is_front_page()) echo 'home'; ?>">
+	<div id="header"" >	
 		<div class="container" >
 			<div class="row" >
 				<div class="col-sm" >
@@ -58,7 +58,9 @@
 					</a><!-- #site_id -->
 				</div><!-- .col-sm -->
 				<div class="col-sm col-md-9 text-right" >
-					<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+					<div class="menu" >
+						<?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
+					</div><!-- .menu -->
 					<a class="menu-toggle" >
 						<span></span>
 						<span></span>
