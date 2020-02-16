@@ -7,29 +7,31 @@
 	top:0; left:0;
 	width:100%; height:auto;
 	z-index:100;
-	padding:10px 0;
+	padding:10px 0 0;
 	margin:0 auto;
 	@include defaultTransition;
 	
 	#site_id{
 		display:inline-block;
-		width:200px; height:auto;
+		width:100%; height:auto;
 		
 		img{width:100%; height:auto;}
 	}
 	
 	.menu{
 		margin:15px 0;
-		display:inline-block;
-		
+		display:none; 
+		 
 		ul{
 			list-style:none;
+			margin:0 20px 0;
+			padding:0;
 			
 			li{
 				display:inline-block; 
 				font-size:80%;
 				font-weight:400;
-				margin:0 20px;
+				margin:0 10px;
 				text-align:center;
 				
 				a{

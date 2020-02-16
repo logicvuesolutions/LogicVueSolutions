@@ -57,7 +57,7 @@
 						<img src="<?php the_field('brand_identity', 'options'); ?>" alt="Logicvue Solutions" >
 					</a><!-- #site_id -->
 				</div><!-- .col-sm -->
-				<div class="col-sm-9 text-right" >
+				<div class="col-sm col-md-9 text-right" >
 					<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 					<a class="menu-toggle" >
 						<span></span>
