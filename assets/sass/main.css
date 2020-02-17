@@ -244,7 +244,7 @@ blockquote {
       background: -moz-linear-gradient(42deg, #3232ff, #a20045);
       background: linear-gradient(42deg, #3232ff, #a20045); }
   #header.stuck {
-    background: #0a0216; }
+    background: rgba(0, 0, 0, 0.85); }
 
 #solutions-menu {
   position: relative;
@@ -285,13 +285,32 @@ blockquote {
         color: #0a0216; }
     #solutions-menu ul.nav-tabs a.nav-link {
       border-radius: 0; }
-  #solutions-menu.compressed {
+  #solutions-menu.stuck {
     position: fixed;
     top: 90px;
     bottom: auto;
     z-index: 2; }
-    #solutions-menu.compressed ul li a {
+    #solutions-menu.stuck ul li a {
       padding: 0 30px; }
+  #solutions-menu.sticky {
+    position: relative;
+    bottom: auto;
+    z-index: 2; }
+
+.home #solutions-menu {
+  position: fixed;
+  bottom: 0; }
+  .home #solutions-menu.stuck {
+    position: fixed;
+    top: 90px;
+    bottom: auto;
+    z-index: 2; }
+    .home #solutions-menu.stuck ul li a {
+      padding: 0 30px; }
+  .home #solutions-menu.sticky {
+    position: relative;
+    bottom: auto;
+    z-index: 2; }
 
 /* ==========================================
 	Individual Page Elements
@@ -332,8 +351,9 @@ body.home {
 
 #solutions-content {
   background: #fff;
-  padding: 50px 0;
   color: #0a0216; }
+  #solutions-content .tab-pane {
+    padding: 50px 0; }
 
 /* ==========================================
 	Responsive Styles

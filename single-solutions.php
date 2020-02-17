@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <div class="single-solution" >
 
-	<div id="solutions-menu" class="compressed" style="top:90px;">
+	<div id="solutions-menu" class="stuck" style="top:90px;">
 		<!-- run the loop for custom post types -->
 		<?php $args = array('post_type' => 'solutions', 'order' => 'ASC' ); 
 		$solutionQuery = new WP_Query( $args );  if ($solutionQuery->have_posts() ): $tabCount=0; ?>

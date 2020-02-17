@@ -40,8 +40,9 @@ body.home{
 
 #solutions-content{
 	background:$white;
-	padding:50px 0;
 	color:$black;
+	
+	.tab-pane{padding:50px 0;}
 }
 
 

@@ -33,7 +33,7 @@
 	<ul class="nav nav-tabs" role="tablist" >
 		<?php while ( $solutionQuery->have_posts() ): $solutionQuery->the_post(); ?>
 		<li class="nav-item" >
-			<a class="nav-link <?php if($tabCount==0){ echo 'active'; }  ?>" id="<?php the_title(); ?>-tab" data-toggle="tab" href="#<?php the_title(); ?>" role="tab" aria-controls="<?php the_title(); ?>" ><?php the_title(); ?></a>
+			<a class="nav-link" id="<?php the_title(); ?>-tab" data-toggle="tab" href="#<?php the_title(); ?>" role="tab" aria-controls="<?php the_title(); ?>" ><?php the_title(); ?></a>
 		</li>
 		<?php $tabCount++; wp_reset_postdata(); endwhile; ?>
 	</ul><!-- .nav-tags -->
@@ -48,7 +48,7 @@
 				$solutionQuery2 = new WP_Query( $args); if ($solutionQuery2->have_posts() ): $tabCount2=0; ?>
 				<div class="tab-content" >
 					<?php while( $solutionQuery2->have_posts() ): $solutionQuery2->the_post(); ?>
-					<div class="tab-pane fade <?php if($tabCount2==0){ echo 'show active'; }  ?>" id="<?php the_title(); ?>" role="tabpanel" aria-labelledby="<?php the_title(); ?>-tab">
+					<div class="tab-pane fade" id="<?php the_title(); ?>" role="tabpanel" aria-labelledby="<?php the_title(); ?>-tab">
 						<?php the_content(); ?>
 						
 						<div class="text-right" >

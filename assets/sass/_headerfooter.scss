@@ -77,13 +77,12 @@
 		}
 	}
 
-	&.stuck{background:$black;}
+	&.stuck{background:rgba(0,0,0,.85);}
 	
 }
 
-
 #solutions-menu{ 
-	position: relative;
+	position:relative;
     display: block;
     width: 100%;
 	text-align:center;
@@ -116,12 +115,38 @@
 		&.nav-tabs a.nav-link{border-radius:0;}
 	}
 	
-	&.compressed{
+	&.stuck{
 		position:fixed; 
 		top:90px; 
 		bottom:auto;
 		z-index:2;
 		
 		ul li a{padding:0 30px;}
+	}
+	
+	&.sticky{
+		position:relative;
+		bottom:auto;
+		z-index:2;
+	}
+}
+
+.home #solutions-menu{
+	position:fixed;
+	bottom:0;
+	
+	&.stuck{
+		position:fixed; 
+		top:90px; 
+		bottom:auto;
+		z-index:2;
+		
+		ul li a{padding:0 30px;}
+	}
+	
+	&.sticky{
+		position:relative;
+		bottom:auto;
+		z-index:2;
 	}
 }
