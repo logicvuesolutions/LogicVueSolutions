@@ -48,8 +48,8 @@
 	
 	 <?php wp_head(); ?>
 </head>
-<body class="<?php if (is_front_page()) echo 'home'; ?>">
-	<div id="header"" >	
+<body class="<?php if (is_front_page()) echo 'home';?>">
+	<div id="header" >	
 		<div class="container" >
 			<div class="row" >
 				<div class="col-sm" >

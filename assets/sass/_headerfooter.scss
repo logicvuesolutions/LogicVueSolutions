@@ -48,6 +48,8 @@
 					}
 					&:hover:after{@include lvs-gradient;}
 				}
+				
+				&.current-menu-item a:after{@include lvs-gradient;}
 			}
 		}
 	}
@@ -77,4 +79,49 @@
 
 	&.stuck{background:$black;}
 	
+}
+
+
+#solutions-menu{ 
+	position: relative;
+    display: block;
+    width: 100%;
+	text-align:center;
+	@include lvs-gradient;
+		 
+	ul{
+		display:block;
+		list-style:none;
+		margin:0; padding:0;
+		border-bottom-color:$trans;
+
+		li{
+			display:inline-block; 
+			font-size:80%;
+			font-weight:400;
+			@include defaultTransition;
+
+			a{
+				display:block;
+				padding:20px 30px;
+				color:$white;
+				@include defaultTransition;
+				&.active{color:$black; font-weight:bold;}
+			}
+			
+			&:hover{background:$white;}
+			&:hover > a{color:$black;}
+		}
+		
+		&.nav-tabs a.nav-link{border-radius:0;}
+	}
+	
+	&.compressed{
+		position:fixed; 
+		top:90px; 
+		bottom:auto;
+		z-index:2;
+		
+		ul li a{padding:0 30px;}
+	}
 }

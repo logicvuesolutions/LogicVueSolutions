@@ -27,6 +27,9 @@ body {
   -moz-transition: all ease-in-out .2s;
   transition: all ease-in-out .2s; }
 
+.container {
+  max-width: 1000px; }
+
 #body {
   padding: 0;
   margin: 0 auto; }
@@ -149,14 +152,11 @@ blockquote {
   overflow: hidden;
   background: transparent; }
 
-.parallax {
-  height: auto;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+#indicate-more {
   text-align: center;
-  padding: 100px 0; }
+  color: #3232ff;
+  font-size: 300%;
+  margin: 20px auto; }
 
 .progressive-section ul {
   list-style: none;
@@ -215,6 +215,12 @@ blockquote {
             background: -o-linear-gradient(42deg, #3232ff, #a20045);
             background: -moz-linear-gradient(42deg, #3232ff, #a20045);
             background: linear-gradient(42deg, #3232ff, #a20045); }
+        #header .menu ul li.current-menu-item a:after {
+          background: #3232ff;
+          background: -webkit-linear-gradient(42deg, #3232ff, #a20045);
+          background: -o-linear-gradient(42deg, #3232ff, #a20045);
+          background: -moz-linear-gradient(42deg, #3232ff, #a20045);
+          background: linear-gradient(42deg, #3232ff, #a20045); }
   #header a.menu-toggle {
     position: relative;
     width: 35px;
@@ -240,46 +246,9 @@ blockquote {
   #header.stuck {
     background: #0a0216; }
 
-/* ==========================================
-	Individual Page Elements
-========================================== */
-/* Homepage */
-body.home {
-  color: #fff; }
-  body.home .bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: -1; }
-    body.home .bg .bg-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      background: rgba(0, 0, 0, 0.75); }
-    body.home .bg .bg-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      background-position: center center;
-      background-attachment: fixed;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url("../images/background_placeholder.png"); }
-
 #solutions-menu {
   position: relative;
   display: block;
-  bottom: 0;
-  left: 0;
   width: 100%;
   text-align: center;
   background: #3232ff;
@@ -316,6 +285,50 @@ body.home {
         color: #0a0216; }
     #solutions-menu ul.nav-tabs a.nav-link {
       border-radius: 0; }
+  #solutions-menu.compressed {
+    position: fixed;
+    top: 90px;
+    bottom: auto;
+    z-index: 2; }
+    #solutions-menu.compressed ul li a {
+      padding: 0 30px; }
+
+/* ==========================================
+	Individual Page Elements
+========================================== */
+/* Homepage */
+body.home {
+  color: #fff; }
+  body.home h1 {
+    font-size: 450%; }
+  body.home .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1; }
+    body.home .bg .bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.75); }
+    body.home .bg .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("../images/background_placeholder.png"); }
 
 #solutions-content {
   background: #fff;
@@ -334,10 +347,4 @@ body.home {
     width: 200px; }
 
   #header .menu {
-    display: inline-block; }
-
-  h1 {
-    font-size: 400%; } }
-/* ==========================================
-	Colorpicker
-========================================== */
+    display: inline-block; } }
