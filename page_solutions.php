@@ -22,7 +22,7 @@
 <div class="container" >
 	<div class="row" >
 		<div class="col-sm" id="indicate-more" >
-			<i class="fal fa-angle-down color-blue"></i>
+			<a href="#indicate-more" ><i class="fal fa-angle-down color-blue"></i></a>
 		</div><!-- #indicate-more -->
 	</div><!-- .row -->
 </div><!-- .container -->

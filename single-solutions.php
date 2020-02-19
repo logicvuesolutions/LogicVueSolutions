@@ -3,17 +3,7 @@
 <div class="single-solution" >
 
 	<div id="solutions-menu" class="stuck" style="top:90px;">
-		<!-- run the loop for custom post types -->
-		<?php $args = array('post_type' => 'solutions', 'order' => 'ASC' ); 
-		$solutionQuery = new WP_Query( $args );  if ($solutionQuery->have_posts() ): $tabCount=0; ?>
-		<ul class="nav nav-tabs" role="tablist" >
-			<?php while ( $solutionQuery->have_posts() ): $solutionQuery->the_post(); ?>
-			<li class="nav-item" >
-				<a class="nav-link " id="<?php the_title(); ?>-tab" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
-			</li>
-			<?php $tabCount++; wp_reset_postdata(); endwhile; ?>
-		</ul><!-- .nav-tags -->
-		<?php endif; ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'solutions' ) ); ?>
 	</div><!-- #solutions-menu -->
 
 
