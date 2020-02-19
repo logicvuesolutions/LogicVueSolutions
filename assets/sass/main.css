@@ -245,7 +245,7 @@ i.left {
   right: -500px;
   height: 100%;
   width: 500px;
-  padding: 50px;
+  padding: 50px 100px 50px 50px;
   z-index: 20;
   overflow: scroll;
   background: #fff;
