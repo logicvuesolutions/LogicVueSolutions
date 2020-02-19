@@ -40,20 +40,6 @@ jQuery(function($){
 		});
 		
 		
-		/* smooth scroll */
-		$( 'a[href*="#"]:not([href="#"])' ).click(function(){
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname){
-				var target = $(this.hash), headerH = $("#header").height() -110;
-				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-				
-				if (target.length){
-					$('html,body').animate({
-						scrollTop: target.offset().top - headerH
-					}, 500);
-						return false;
-				}
-			}
-		});
 		
 		/*
 		var pathname = window.location.pathname;
