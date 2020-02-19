@@ -49,6 +49,17 @@
 	 <?php wp_head(); ?>
 </head>
 <body class="<?php if (is_front_page()) echo 'home';?>">
+	
+	<div id="menu-toggle" >
+		<span></span>
+		<span></span>
+	</div><!-- #menu-toggle -->
+	
+	<div id="contact-sidebar" >
+		<?php the_field('contact_sidebar', 'options'); ?>
+	</div><!-- #contact-sidebar -->
+	<div id="overlay" ></div>
+	
 	<div id="header" >	
 		<div class="container" >
 			<div class="row" >
@@ -61,10 +72,6 @@
 					<div class="menu" >
 						<?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
 					</div><!-- .menu -->
-					<a class="menu-toggle" >
-						<span></span>
-						<span></span>
-					</a>
 				</div><!-- .col-sm-9 -->
 			</div><!-- .row -->
 		</div><!-- .container -->

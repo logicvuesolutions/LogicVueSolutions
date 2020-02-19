@@ -1,6 +1,6 @@
 jQuery(function($){
 	
-/* Header setup on scroll / block */
+/* Header setup on scroll */
 	
 	if( $('body').hasClass('home') ){
 		$(window).scroll(function() {
@@ -29,24 +29,18 @@ jQuery(function($){
 	}
 	
 	$(document).ready(function(){
+		/* Sticky Solutions Menu on Scroll */
 		$('#solutions-menu .nav').on('click', function(){
 			$('#solutions-menu').addClass('sticky').removeClass;
 		});
 		
-		var pathname = window.location.pathname;
-		var solutionsPath = pathname.split("solutions/").pop().replace("/", "");
-		
-		/* check url for active path; set class as active 
-		console.log( 'Solutions Path = ' + solutionsPath );
-		console.log( '#solutions-menu #'+solutionsPath+'-tab' );
-		console.log( '#'+solutionsPath+'-tab' );
-		*/
-		
-		$('#'+solutionsPath+'-tab').addClass('active');
+		$('#menu-toggle').on('click', function(){
+			$(this).toggleClass('open'); 
+			$('#contact-sidebar, #overlay').toggleClass('open');
+		});
 		
 		
-		
-		
+		/* smooth scroll */
 		$( 'a[href*="#"]:not([href="#"])' ).click(function(){
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname){
 				var target = $(this.hash), headerH = $("#header").height() -110;
@@ -61,8 +55,17 @@ jQuery(function($){
 			}
 		});
 		
+		/*
+		var pathname = window.location.pathname;
+		var solutionsPath = pathname.split("solutions/").pop().replace("/", "");
 		
+		/* check url for active path; set class as active 
+		console.log( 'Solutions Path = ' + solutionsPath );
+		console.log( '#solutions-menu #'+solutionsPath+'-tab' );
+		console.log( '#'+solutionsPath+'-tab' );
 		
+		$('#'+solutionsPath+'-tab').addClass('active');
+		*/
 		
 		
 	});

@@ -6,7 +6,7 @@
 	position:fixed;
 	top:0; left:0;
 	width:100%; height:auto;
-	z-index:100;
+	z-index:10;
 	padding:10px 0 0;
 	margin:0 auto;
 	@include defaultTransition;
@@ -21,6 +21,7 @@
 	.menu{
 		margin:15px 0;
 		display:none; 
+		font-family:$mont;
 		 
 		ul{
 			list-style:none;
@@ -54,38 +55,89 @@
 		}
 	}
 	
-	a.menu-toggle{
-		position:relative;
-		width:35px;
-		top:7px;
-		display:inline-block;	
-			
-		span{
-			width:100%;
-			height:4px;
-			background:$white;
-			border-radius:20px;
-			margin:4px 0;
-			float:right;
-
-			&:first-of-type{width:100%;}
-			&:last-of-type{width:65%;}
-		}
-		
-		&:hover{
-			span{@include lvs-gradient;}
-		}
-	}
-
+	
 	&.stuck{background:rgba(0,0,0,.85);}
 	
 }
+
+#menu-toggle{
+	position:fixed;
+	z-index:30;
+	width:35px; height:35px;
+	top:35px; right:50px;
+	display:inline-block;
+
+	span{
+		position:absolute;
+		width:100%;
+		height:4px;
+		background:$white;
+		border-radius:20px;
+		margin:4px 0;
+		float:right;
+		@include defaultTransition;
+
+		&:first-of-type{width:100%; top:0; right:0;}
+		&:last-of-type{width:65%; top:10px; right:0;}
+	}
+
+	&:hover{
+		> span{@include lvs-gradient;}
+	}
+
+	&.open{
+
+		> span{@include lvs-gradient; @include defaultTransition;}
+
+		> span:first-of-type{transform:rotate(-45deg); top:9px;}
+		> span:last-of-type{width:100%; transform:rotate(45deg);}
+	}
+}
+
+
+
+
+
+#contact-sidebar{
+	position:fixed;
+	top:0; right:-500px;
+	height:100%; width:500px;
+	padding:50px;
+	z-index:20;
+	overflow:scroll;
+	background:$white;
+	color:$black;
+	@include defaultTransition;
+	
+	&.open{right:0;}
+	
+}
+
+#overlay{
+	width:100%; height:100%;
+	top:0; left:0;
+	position:fixed;
+	display:block;
+	z-index:-10;
+	background:rgba(0,0,0,0);
+	@include defaultTransition;
+	
+	&.open{
+		z-index:19;
+		background:rgba(0,0,0,.9);
+	}
+}
+
+
+
+
 
 #solutions-menu{ 
 	position:relative;
     display: block;
     width: 100%;
 	text-align:center;
+	font-family:$mont;
 	@include lvs-gradient;
 		 
 	ul{

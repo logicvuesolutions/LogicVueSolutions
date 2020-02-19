@@ -42,7 +42,6 @@ h2{font-size:300%;}
 p{margin-bottom:20px;}
 
 a{
-	font-family:$mont;
 	color:$black;
 	@include defaultTransition;
 	cursor:pointer;
@@ -68,13 +67,7 @@ a{
 		&:hover{
 			@include lvs-gradient;
 			@include defaultTransition;
-			
-			i.right{padding-left:25px; @include defaultTransition;}
-			i.left{padding-right:25px; @include defaultTransition;}
 		}
-		
-		i.right{padding-left:15px; @include defaultTransition;}
-		i.left{padding-right:15px; @include defaultTransition;}
 		
 	}
 }
@@ -88,3 +81,5 @@ hr{
 }
 
 
+i.right{padding-left:15px; @include defaultTransition;}
+i.left{padding-right:15px; @include defaultTransition;}
