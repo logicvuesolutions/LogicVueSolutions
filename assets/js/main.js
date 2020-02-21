@@ -1,5 +1,23 @@
 jQuery(function($){
 	
+	$(window).on("load resize", function() {
+        if ($(window).width() >= 768) {
+			//if screen is large, show the contact us sidebar when menu-toggle is clicked
+			$('#menu-toggle').on('click', function(){
+				$(this).toggleClass('open'); 
+				$('#contact-sidebar, #overlay').toggleClass('open');
+			});
+			
+			
+		}else{
+			// else show the main menu when menu-toggle is clicked
+			$('#menu-toggle').on('click', function(){
+				$('#header .menu').toggleClass('open');
+				$('#header').addClass('stuck');
+			});
+		}
+	});
+	
 /* Header setup on scroll */
 	
 	if( $('body').hasClass('home') ){
@@ -34,10 +52,9 @@ jQuery(function($){
 			$('#solutions-menu').addClass('sticky').removeClass;
 		});
 		
-		$('#menu-toggle').on('click', function(){
-			$(this).toggleClass('open'); 
-			$('#contact-sidebar, #overlay').toggleClass('open');
-		});
+		
+	
+		
 		
 		
 		

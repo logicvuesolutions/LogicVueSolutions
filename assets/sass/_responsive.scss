@@ -4,24 +4,33 @@
 
 // Mobile - Smallest screens 
 @media all and (max-width:580px){
-	#header #site_id{width:75%; margin:0 auto;}
 }
 
 // Mobile - Default 
 @media all and (max-width:768px) {}
 
 // Mobile - Tablets
-@media all and (min-width:768px) {}
-
-
-// Mobile - Desktop
-@media all and (min-width:992px) {
-	#header #site_id{width:200px;}
-	#header .menu{display:inline-block;}
+@media all and (min-width:768px) {
+	
+	#header{
+		#site_id{width:100%;}
+		.menu{display:block; margin-right:75px;}
+	}
+	
+	body.home h1{font-size:450%;}
+	
+	#contact-sidebar{padding:50px 100px 50px 50px;}	
 	
 }
 
+
+// Mobile - Desktop
+@media all and (min-width:992px) {}
+
 // Mobile - Large Screens
 @media all and (min-width:1200px) {
+	#header .menu{display:block; margin-right:-50px;}
+	
+	
 }
 

@@ -26,7 +26,7 @@
 	</div><!-- .bg -->
 </div><!-- .container-fluid -->
 
-<div id="solutions-menu" >
+<div id="solutions-menu" class="d-none d-md-block" >
 	<!-- run the loop for custom post types -->
 	<?php $args = array('post_type' => 'solutions', 'order' => 'ASC' ); 
 	$solutionQuery = new WP_Query( $args );  if ($solutionQuery->have_posts() ): $tabCount=0; ?>

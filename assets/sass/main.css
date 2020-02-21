@@ -57,14 +57,14 @@ h1, h2, h3, h4, h5 {
   margin: 20px 0 30px; }
 
 h1 {
-  font-size: 300%;
+  font-size: 200%;
   font-weight: 800;
-  letter-spacing: 2px; }
+  letter-spacing: 1px; }
   h1 span.light {
     font-weight: 400; }
 
 h2 {
-  font-size: 300%; }
+  font-size: 150%; }
 
 p {
   margin-bottom: 20px; }
@@ -145,7 +145,7 @@ i.left {
   transition: all ease-in-out .2s; }
   #header #site_id {
     display: inline-block;
-    width: 100%;
+    width: 40%;
     height: auto; }
     #header #site_id img {
       width: 100%;
@@ -153,7 +153,8 @@ i.left {
   #header .menu {
     margin: 15px 0;
     display: none;
-    font-family: "Montserrat", Times New Roman, Serif; }
+    font-family: "Montserrat", Times New Roman, Serif;
+    text-align: right; }
     #header .menu ul {
       list-style: none;
       margin: 0 20px 0;
@@ -187,6 +188,11 @@ i.left {
           background: -o-linear-gradient(42deg, #3232ff, #a20045);
           background: -moz-linear-gradient(42deg, #3232ff, #a20045);
           background: linear-gradient(42deg, #3232ff, #a20045); }
+    #header .menu.open {
+      text-align: center;
+      display: block; }
+      #header .menu.open ul li {
+        width: 100%; }
   #header.stuck {
     background: rgba(0, 0, 0, 0.85); }
 
@@ -242,10 +248,11 @@ i.left {
 #contact-sidebar {
   position: fixed;
   top: 0;
-  right: -500px;
+  right: -100%;
   height: 100%;
-  width: 500px;
-  padding: 50px 100px 50px 50px;
+  width: 85%;
+  max-width: 500px;
+  padding: 50px 20px 20px;
   z-index: 20;
   overflow: scroll;
   background: #fff;
@@ -404,7 +411,7 @@ blockquote {
 body.home {
   color: #fff; }
   body.home h1 {
-    font-size: 450%; }
+    font-size: 250%; }
   body.home .bg {
     position: fixed;
     top: 0;
@@ -437,13 +444,19 @@ body.home {
 /* ==========================================
 	Responsive Styles
 ========================================== */
-@media all and (max-width: 580px) {
+@media all and (min-width: 768px) {
   #header #site_id {
-    width: 75%;
-    margin: 0 auto; } }
-@media all and (min-width: 992px) {
-  #header #site_id {
-    width: 200px; }
-
+    width: 100%; }
   #header .menu {
-    display: inline-block; } }
+    display: block;
+    margin-right: 75px; }
+
+  body.home h1 {
+    font-size: 450%; }
+
+  #contact-sidebar {
+    padding: 50px 100px 50px 50px; } }
+@media all and (min-width: 1200px) {
+  #header .menu {
+    display: block;
+    margin-right: -50px; } }
