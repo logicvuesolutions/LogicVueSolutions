@@ -8,7 +8,6 @@ jQuery(function($){
 				$('#contact-sidebar, #overlay').toggleClass('open');
 			});
 			
-			
 		}else{
 			// else show the main menu when menu-toggle is clicked
 			$('#menu-toggle').on('click', function(){
