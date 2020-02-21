@@ -49,7 +49,7 @@
 				<div class="tab-content" >
 					<?php while( $solutionQuery2->have_posts() ): $solutionQuery2->the_post(); ?>
 					<div class="tab-pane fade" id="<?php the_title(); ?>" role="tabpanel" aria-labelledby="<?php the_title(); ?>-tab">
-						<?php the_content(); ?>
+						<?php the_field('excerpt'); ?>
 						
 						<div class="text-right" >
 							<a href="<?php the_permalink(); ?>" class="button" >Learn More <i class="fal fa-arrow-right right"></i></a>

@@ -31,7 +31,7 @@ jQuery(function($){
 		$('#header').addClass('stuck');
 		
 		var solutionsNav = $('#solutions-menu');
-		var solutionsNavTop = solutionsNav.offset().top + 25;
+		var solutionsNavTop = solutionsNav.offset().top;
 		
 
 		$(window).scroll(function(){
@@ -48,7 +48,7 @@ jQuery(function($){
 	$(document).ready(function(){
 		/* Sticky Solutions Menu on Scroll */
 		$('#solutions-menu .nav').on('click', function(){
-			$('#solutions-menu').addClass('sticky').removeClass;
+			$('#solutions-menu').addClass('sticky');
 		});
 		
 		

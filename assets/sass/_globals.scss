@@ -23,7 +23,7 @@ body{
 .clear{clear:both; float:none;}
 	
 ::selection,
--moz::selection{background:$lowTrans;}
+-moz::selection{background:$pink; color:$white;}
 
 h1, h2, h3, h4, h5{
 	font-family:$mont;
@@ -55,6 +55,7 @@ a{
 		display:inline-block;
 		height:auto;
 		color:$white;
+		font-family:$mont;
 		font-size:80%;
 		margin:20px 0;
 		padding:10px 30px;
