@@ -22,7 +22,7 @@
 <div class="container-fluid" >
 	<div class="bg" >
 		<div class="bg-overlay" ></div>
-		<video autoplay="" loop="" muted="" class="bg-video" >
+		<video autoplay="" loop="" muted="" width="100%" height="100%" class="bg-video" >
 			<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logicvuesolutions_home_vid_1.mp4">
 		</video>
 	</div><!-- .bg -->
