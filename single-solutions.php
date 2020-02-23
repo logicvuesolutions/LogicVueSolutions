@@ -30,7 +30,7 @@
 					<h1><?php the_field('header'); ?></h1>
 					<?php the_field('content'); ?>
 					<div class="text-right" >
-						<a href="/contact" class="button" >Start a Project</a>
+						<a href="/contact" class="button" >Start a Project <i class="fal fa-arrow-right right"></i></a>
 					</div><!-- .text-right -->
 					
 				</div><!-- .<?php the_field('content_width'); ?> -->
