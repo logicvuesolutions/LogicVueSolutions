@@ -31,7 +31,7 @@
 	transition:$all $ease $time;
 }
 
-// Gradient
+// Gradients
 @mixin gradient($angle, $color-1, $color-2){
     background: $color-1; 
     background: -webkit-linear-gradient($angle, $color-1, $color-2); 
@@ -46,6 +46,14 @@
     background: -o-linear-gradient(42deg, $blue, $purple );
     background: -moz-linear-gradient(42deg, $blue, $purple ); 
     background: linear-gradient(42deg, $blue, $purple );
+}
+
+@mixin gradient-3($angle, $color-1, $color-2, $color-3){
+    background: $color-1; 
+    background: -webkit-linear-gradient($angle, $color-1, $color-2, $color-3); 
+    background: -o-linear-gradient($angle, $color-1, $color-2, $color-3); 
+    background: -moz-linear-gradient($angle, $color-1, $color-2, $color-3); 
+    background: linear-gradient($angle, $color-1, $color-2, $color-3);   
 }
 
 
