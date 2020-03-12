@@ -22,7 +22,8 @@
 	.menu{
 		margin:15px 0;
 		display:none; 
-		font-family:$mont;
+		font-family:$osans;
+		letter-spacing:1px;
 		text-align:right;
 		 
 		ul{
@@ -33,7 +34,6 @@
 			li{
 				display:inline-block; 
 				font-size:80%;
-				font-weight:400;
 				margin:0 10px;
 				text-align:center;
 				
@@ -65,7 +65,7 @@
 	}
 	
 	
-	&.stuck{background:rgba(0,0,0,.85);}
+	&.stuck{background:$black;}
 	
 }
 
@@ -147,7 +147,6 @@
     display: block;
     width: 100%;
 	text-align:center;
-	font-family:$mont;
 	@include lvs-gradient;
 		 
 	ul{
@@ -158,14 +157,13 @@
 
 		li{
 			display:inline-block; 
-			font-size:80%;
-			font-weight:400;
 			@include defaultTransition;
 
 			a{
 				display:block;
-				padding:20px 30px;
+				padding:15px;
 				color:$white;
+				font-size:70%;
 				@include defaultTransition;
 				&.active{color:$black; font-weight:bold;}
 			}

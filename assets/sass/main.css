@@ -1,7 +1,7 @@
 /* ==========================================
 	Variables
 ========================================== */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800|Open+Sans:300,400,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,800|Open+Sans:300,400 &display=swap");
 /* ==========================================
 	Mixins
 ========================================== */
@@ -13,7 +13,7 @@
     color: #fff;
     margin-top: -10px; }
   100% {
-    color: #3232ff;
+    color: #0000FF;
     margin-top: 20px; } }
 /* ==========================================
 	Globals
@@ -27,7 +27,7 @@ body, html {
   min-height: 100%; }
 
 body {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
   color: #0a0216;
   font-family: "Open Sans", Arial, Sans-Serif;
@@ -41,6 +41,9 @@ body {
 .container {
   max-width: 1000px; }
 
+.container-fluid {
+  padding: 0; }
+
 #body {
   padding: 0;
   margin: 0 auto; }
@@ -52,7 +55,7 @@ body {
 ::selection,
 -moz::selection {
   background: #d9d9dd;
-  color: #3232ff; }
+  color: #0000FF; }
 
 h1, h2, h3, h4, h5 {
   font-family: "Montserrat", Arial, Sans-Serif;
@@ -87,18 +90,17 @@ a {
     display: inline-block;
     height: auto;
     color: #fff;
-    font-family: "Montserrat", Arial, Sans-Serif;
     font-size: 80%;
     margin: 20px 0;
     padding: 10px 30px;
     text-decoration: none;
     text-align: center;
     border-radius: 30px;
-    background: #a20045;
-    background: -webkit-linear-gradient(42deg, #a20045, #3232ff, #3232ff);
-    background: -o-linear-gradient(42deg, #a20045, #3232ff, #3232ff);
-    background: -moz-linear-gradient(42deg, #a20045, #3232ff, #3232ff);
-    background: linear-gradient(42deg, #a20045, #3232ff, #3232ff);
+    background: #FF0080;
+    background: -webkit-linear-gradient(42deg, #FF0080, #0000FF, #0000FF);
+    background: -o-linear-gradient(42deg, #FF0080, #0000FF, #0000FF);
+    background: -moz-linear-gradient(42deg, #FF0080, #0000FF, #0000FF);
+    background: linear-gradient(42deg, #FF0080, #0000FF, #0000FF);
     background-size: 200% 100%;
     background-position: right center;
     -webkit-transition: all ease-in-out .2s;
@@ -153,7 +155,8 @@ i.left {
   #header .menu {
     margin: 15px 0;
     display: none;
-    font-family: "Montserrat", Arial, Sans-Serif;
+    font-family: "Open Sans", Arial, Sans-Serif;
+    letter-spacing: 1px;
     text-align: right; }
     #header .menu ul {
       list-style: none;
@@ -162,7 +165,6 @@ i.left {
       #header .menu ul li {
         display: inline-block;
         font-size: 80%;
-        font-weight: 400;
         margin: 0 10px;
         text-align: center; }
         #header .menu ul li a {
@@ -177,24 +179,24 @@ i.left {
             border-radius: 20px;
             margin: 8px auto; }
           #header .menu ul li a:hover:after {
-            background: #3232ff;
-            background: -webkit-linear-gradient(42deg, #3232ff, #a20045);
-            background: -o-linear-gradient(42deg, #3232ff, #a20045);
-            background: -moz-linear-gradient(42deg, #3232ff, #a20045);
-            background: linear-gradient(42deg, #3232ff, #a20045); }
+            background: #0000FF;
+            background: -webkit-linear-gradient(42deg, #FF0080, #0000FF);
+            background: -o-linear-gradient(42deg, #FF0080, #0000FF);
+            background: -moz-linear-gradient(42deg, #FF0080, #0000FF);
+            background: linear-gradient(42deg, #FF0080, #0000FF); }
         #header .menu ul li.current-menu-item a:after {
-          background: #3232ff;
-          background: -webkit-linear-gradient(42deg, #3232ff, #a20045);
-          background: -o-linear-gradient(42deg, #3232ff, #a20045);
-          background: -moz-linear-gradient(42deg, #3232ff, #a20045);
-          background: linear-gradient(42deg, #3232ff, #a20045); }
+          background: #0000FF;
+          background: -webkit-linear-gradient(42deg, #FF0080, #0000FF);
+          background: -o-linear-gradient(42deg, #FF0080, #0000FF);
+          background: -moz-linear-gradient(42deg, #FF0080, #0000FF);
+          background: linear-gradient(42deg, #FF0080, #0000FF); }
     #header .menu.open {
       text-align: center;
       display: block; }
       #header .menu.open ul li {
         width: 100%; }
   #header.stuck {
-    background: rgba(0, 0, 0, 0.85); }
+    background: #0a0216; }
 
 #menu-toggle {
   position: fixed;
@@ -224,17 +226,17 @@ i.left {
       top: 10px;
       right: 0; }
   #menu-toggle:hover > span {
-    background: #3232ff;
-    background: -webkit-linear-gradient(42deg, #3232ff, #a20045);
-    background: -o-linear-gradient(42deg, #3232ff, #a20045);
-    background: -moz-linear-gradient(42deg, #3232ff, #a20045);
-    background: linear-gradient(42deg, #3232ff, #a20045); }
+    background: #0000FF;
+    background: -webkit-linear-gradient(42deg, #FF0080, #0000FF);
+    background: -o-linear-gradient(42deg, #FF0080, #0000FF);
+    background: -moz-linear-gradient(42deg, #FF0080, #0000FF);
+    background: linear-gradient(42deg, #FF0080, #0000FF); }
   #menu-toggle.open > span {
-    background: #3232ff;
-    background: -webkit-linear-gradient(42deg, #3232ff, #a20045);
-    background: -o-linear-gradient(42deg, #3232ff, #a20045);
-    background: -moz-linear-gradient(42deg, #3232ff, #a20045);
-    background: linear-gradient(42deg, #3232ff, #a20045);
+    background: #0000FF;
+    background: -webkit-linear-gradient(42deg, #FF0080, #0000FF);
+    background: -o-linear-gradient(42deg, #FF0080, #0000FF);
+    background: -moz-linear-gradient(42deg, #FF0080, #0000FF);
+    background: linear-gradient(42deg, #FF0080, #0000FF);
     -webkit-transition: all ease-in-out .2s;
     -moz-transition: all ease-in-out .2s;
     transition: all ease-in-out .2s; }
@@ -284,12 +286,11 @@ i.left {
   display: block;
   width: 100%;
   text-align: center;
-  font-family: "Montserrat", Arial, Sans-Serif;
-  background: #3232ff;
-  background: -webkit-linear-gradient(42deg, #3232ff, #a20045);
-  background: -o-linear-gradient(42deg, #3232ff, #a20045);
-  background: -moz-linear-gradient(42deg, #3232ff, #a20045);
-  background: linear-gradient(42deg, #3232ff, #a20045); }
+  background: #0000FF;
+  background: -webkit-linear-gradient(42deg, #FF0080, #0000FF);
+  background: -o-linear-gradient(42deg, #FF0080, #0000FF);
+  background: -moz-linear-gradient(42deg, #FF0080, #0000FF);
+  background: linear-gradient(42deg, #FF0080, #0000FF); }
   #solutions-menu ul {
     display: block;
     list-style: none;
@@ -298,15 +299,14 @@ i.left {
     border-bottom-color: transparent; }
     #solutions-menu ul li {
       display: inline-block;
-      font-size: 80%;
-      font-weight: 400;
       -webkit-transition: all ease-in-out .2s;
       -moz-transition: all ease-in-out .2s;
       transition: all ease-in-out .2s; }
       #solutions-menu ul li a {
         display: block;
-        padding: 20px 30px;
+        padding: 15px;
         color: #fff;
+        font-size: 70%;
         -webkit-transition: all ease-in-out .2s;
         -moz-transition: all ease-in-out .2s;
         transition: all ease-in-out .2s; }
@@ -357,14 +357,22 @@ i.left {
 .content {
   position: relative;
   top: 0;
-  left: 0;
-  margin-top: 150px; }
+  left: 0; }
+
+.intro-block {
+  background: #0000FF;
+  padding: 150px 0 100px;
+  margin-bottom: 100px; }
+  .intro-block h1 {
+    color: #fff; }
+  .intro-block p {
+    color: #01C701; }
 
 blockquote {
   width: 80%;
   display: block;
   margin: 20px 20px 20px 0;
-  border-left: 3px solid #ccba0d;
+  border-left: 3px solid #01C701;
   font-weight: bold;
   padding: 20px 20px 10px; }
   blockquote .caption {
@@ -384,7 +392,7 @@ blockquote {
 
 #indicate-more {
   text-align: center;
-  color: #3232ff;
+  color: #0000FF;
   font-size: 300%;
   margin: 20px auto; }
 

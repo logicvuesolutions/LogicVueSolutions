@@ -8,14 +8,23 @@
 .content{
 	position:relative;
 	top:0; left:0;
-	margin-top:150px;
+}
+
+.intro-block{
+	background: $blue;
+	padding:150px 0 100px;
+	margin-bottom:100px; 
+	
+	h1{color:$white;}
+	
+	p{color:$green;}
 }
 
 blockquote{
 	width:80%;
 	display:block;
 	margin:20px 20px 20px 0;
-	border-left:3px solid $yellow;
+	border-left:3px solid $green;
 	font-weight:bold;
 	padding:20px 20px 10px;
 	

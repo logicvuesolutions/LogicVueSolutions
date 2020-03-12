@@ -11,6 +11,18 @@
 
 
 <div class="content" >
+	<div class="container-fluid" >
+		<div class="intro-block" >
+			<div class="container" >
+				<div class="row" >
+					<div class="col-sm" >
+						<?php the_field('intro'); ?>
+					</div><!-- .col-sm -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</div><!-- .intro-block -->
+	</div><!-- .container-fluid -->
+	
 	<div class="container" >
 		
 		<div class="row" >
