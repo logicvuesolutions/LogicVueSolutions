@@ -21,8 +21,7 @@
 	
 	.menu{
 		margin:15px 0;
-		display:none; 
-		font-family:$osans;
+		display:none;
 		letter-spacing:1px;
 		text-align:right;
 		 
@@ -32,8 +31,7 @@
 			padding:0;
 			
 			li{
-				display:inline-block; 
-				font-size:80%;
+				display:inline-block;
 				margin:0 10px;
 				text-align:center;
 				
@@ -65,7 +63,12 @@
 	}
 	
 	
-	&.stuck{background:$black;}
+	&.stuck{
+		background:$white;
+		@include box-shadow(0, 0, 10px, rgba(0,0,0,.3));
+		
+		.menu li a{color:$black;}
+	}
 	
 }
 
@@ -100,6 +103,10 @@
 
 		> span:first-of-type{transform:rotate(-45deg); top:9px;}
 		> span:last-of-type{width:100%; transform:rotate(45deg);}
+	}
+	
+	&.stuck{
+		> span{background:$black;}
 	}
 }
 
@@ -147,7 +154,7 @@
     display: block;
     width: 100%;
 	text-align:center;
-	@include lvs-gradient;
+	background:$black;
 		 
 	ul{
 		display:block;
@@ -161,20 +168,21 @@
 
 			a{
 				display:block;
-				padding:15px;
+				padding:5px 15px;
 				color:$white;
-				font-size:70%;
+				font-size:80%;
+				cursor: auto;
 				@include defaultTransition;
 				&.active{color:$black; font-weight:bold;}
 			}
 			
-			&:hover{background:$white;}
-			&:hover > a{color:$black;}
+			// &:hover{background:$white;}
+			// &:hover > a{color:$black;}
 			
 			&.current-menu-item {background:$white; a{color:$black;} }
 		}
 		
-		&.nav-tabs a.nav-link{border-radius:0;}
+		&.nav-tabs a.nav-link{border-radius:0; border-color:$black;}
 	}
 	
 	&.stuck{
@@ -183,7 +191,7 @@
 		bottom:auto;
 		z-index:2;
 		
-		ul li a{padding:5px 30px;}
+		// ul li a{padding:5px 30px;}
 	}
 	
 	&.sticky{

@@ -1,14 +1,8 @@
 <?php 
-/* Template Name: Solutions */ 
+/* Template Name: About Us */ 
 ?>
 
 <?php get_header(); ?>
-
-
-	<div id="solutions-menu"style="top:90px;">
-		<?php wp_nav_menu( array( 'theme_location' => 'solutions' ) ); ?>
-	</div><!-- #solutions-menu -->
-
 
 <div class="content" >
 	<div class="container centered" >

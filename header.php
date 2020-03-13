@@ -65,7 +65,7 @@
 			<div class="row" >
 				<div class="col-sm" >
 					<a href="<?php bloginfo('url'); ?>" id="site_id" >
-						<img src="<?php the_field('brand_identity', 'options'); ?>" alt="Logicvue Solutions" >
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/LogicVueSolutions_logo.png" alt="LogicVue Solutions" >
 					</a><!-- #site_id -->
 				</div><!-- .col-sm -->
 				<div class="col-sm-12 col-md-9" >

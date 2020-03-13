@@ -3,21 +3,21 @@
 ========================================== */
 
 // fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700,800|Open+Sans:300,400 &display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 
-$mont: 'Montserrat', Arial, Sans-Serif;
 $osans: 'Open Sans', Arial, Sans-Serif;
 
 // colors 
 $white : #fff;
 $lt-grey : #f5f5f5;
 $grey : #d9d9dd;
-$black : #0a0216;
+$black : #0d1321;
 
-$lowTrans : rgba(255,255,255,.2);
 $trans : transparent;
 
 
-$blue :   #0000FF;
-$pink :   #FF0080;
-$green : #01C701;
+$lvs-blue :   #0c41b2;
+$blue : #46ade2;
+$lt-blue : #d3f3ee;
+$pink : #bc2874;
+$purple : #741865;
