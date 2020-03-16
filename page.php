@@ -5,13 +5,11 @@
 
 <?php get_header(); ?>
 
-
-	<div id="solutions-menu"style="top:90px;">
+<div class="intro" id="<?php the_field('id'); ?>-intro" >
+	<div id="solutions-menu">
 		<?php wp_nav_menu( array( 'theme_location' => 'solutions' ) ); ?>
 	</div><!-- #solutions-menu -->
 
-
-<div class="intro" id="<?php the_field('id'); ?>-intro" >
 	<div class="container centered" >
 		<div class="row" >
 			<div class="col-lg-5 intro-text" >

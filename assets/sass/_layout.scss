@@ -7,7 +7,8 @@
 body.home{
 	position:relative;
 	top:0; left:0;
-	margin-top:100px;
+	margin-top:150px;
+	background-attachment: fixed;
 	background-image:url("../images/lvs_blue_wave.png");
 	background-position:right top;
 	background-size:55%;
@@ -39,6 +40,8 @@ body.body{
 			z-index:-1;
 			min-height:300px;
 		}
+		
+		#solutions-menu{display:none;}
 	}
 
 	.content{
@@ -52,6 +55,8 @@ body.body{
 
 /* Solutions */
 #solutions-intro .intro-image{z-index:0; margin-top:-150px; min-height:500px;}
+
+#solutions-intro #solutions-menu{position:fixed; display:block; top:90px;}
 
 #solutions-content .image-wrapper{min-height:50px; }
 

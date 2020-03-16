@@ -245,6 +245,7 @@ blockquote {
     #header.stuck .menu li a {
       color: #0d1321; }
 
+/* Menu Toggle */
 #menu-toggle {
   position: fixed;
   z-index: 30;
@@ -296,6 +297,7 @@ blockquote {
   #menu-toggle.stuck > span {
     background: #0d1321; }
 
+/* Side Drawer */
 #contact-sidebar {
   position: fixed;
   top: 0;
@@ -330,6 +332,7 @@ blockquote {
     z-index: 19;
     background: rgba(0, 0, 0, 0.9); }
 
+/* Solutions Menu */
 #solutions-menu {
   position: relative;
   display: block;
@@ -400,7 +403,8 @@ body.home {
   position: relative;
   top: 0;
   left: 0;
-  margin-top: 100px;
+  margin-top: 150px;
+  background-attachment: fixed;
   background-image: url("../images/lvs_blue_wave.png");
   background-position: right top;
   background-size: 55%;
@@ -427,6 +431,8 @@ body.body .intro {
   body.body .intro .image-wrapper {
     z-index: -1;
     min-height: 300px; }
+  body.body .intro #solutions-menu {
+    display: none; }
 body.body .content {
   position: relative;
   top: 0;
@@ -441,6 +447,11 @@ body.body .repeater-row {
   z-index: 0;
   margin-top: -150px;
   min-height: 500px; }
+
+#solutions-intro #solutions-menu {
+  position: fixed;
+  display: block;
+  top: 90px; }
 
 #solutions-content .image-wrapper {
   min-height: 50px; }
@@ -458,9 +469,6 @@ body.body .repeater-row {
   #header .menu {
     display: block;
     margin-right: 75px; }
-
-  body.home h1 {
-    font-size: 450%; }
 
   #contact-sidebar {
     padding: 50px 100px 50px 50px; } }
