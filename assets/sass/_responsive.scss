@@ -28,19 +28,21 @@
 
 // Mobile - Desktop
 @media all and (min-width:992px) {
-	.intro{background-position:top right;}
-	.content{margin-top:-100px;}
+	body.body{
+		.intro{background-position:top right;}
+		.content{margin-top:-100px;}
+	}
 }
 
 // Mobile - Large Screens
 @media all and (min-width:1200px) {
 	#header .menu{display:block; margin-right:-50px;}
-	body.home{ 
-		.bg .bg-video{width:100%; height:auto;}
-	}
 	
-	.intro{min-height:600px;}
-	.content{margin-top:-200px;}
+	
+	body.body{
+		.intro{min-height:600px;}
+		.content{margin-top:-200px;}
+	}
 	
 	
 }

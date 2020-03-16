@@ -48,7 +48,7 @@
 	
 	 <?php wp_head(); ?>
 </head>
-<body class="<?php if (is_front_page()) echo 'home';?>">
+<body class="<?php if (is_front_page()) echo 'home'; if (!is_front_page()) echo 'body'; ?>">
 	
 	<div id="menu-toggle" >
 		<span></span>
@@ -63,7 +63,7 @@
 	<div id="header" >	
 		<div class="container" >
 			<div class="row" >
-				<div class="col-sm" >
+				<div class="col" >
 					<a href="<?php bloginfo('url'); ?>" id="site_id" >
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/LogicVueSolutions_logo.png" alt="LogicVue Solutions" >
 					</a><!-- #site_id -->
