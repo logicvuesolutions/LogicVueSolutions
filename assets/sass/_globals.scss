@@ -4,10 +4,10 @@
 
 html{margin:0; padding:0;}
 
-body, html{height:100%; min-height:100%;}
+body, html{}
 
 body{
-	font-size:22px;
+	font-size:18px;
 	line-height:1.6;
 	color:$black;
 	font-family:$osans;
@@ -18,6 +18,7 @@ body{
 } 
 
 .container{max-width:1000px;}
+.container.centered{max-width:800px; margin:0 auto;}
 .container-fluid{padding:0;}
 	
 	#body{padding:0; margin:0 auto; }
@@ -25,23 +26,18 @@ body{
 .clear{clear:both; float:none;}
 	
 ::selection,
--moz::selection{background:$grey; color:$blue;}
+-moz::selection{background:$lt-blue; color:$lvs-blue;}
 
 h1, h2, h3, h4, h5{
-	font-family:$mont;
 	margin:20px 0 30px;}
 
-h1{
-	font-size:250%;
-	font-weight:800;
-	letter-spacing:1px;
-	
-	span.light{font-weight:400;}
-}
+h1{font-size:250%;}
 
-h2{font-size:300%; font-weight:400;}
+h2{font-size:120%; line-height:1.8; font-weight:700;}
 
 p{margin-bottom:20px;}
+
+strong{font-weight:700;}
 
 a{
 	color:$black;
@@ -59,18 +55,22 @@ a{
 		color:$white;
 		font-size:80%;
 		margin:20px 0;
-		padding:10px 30px;
+		padding:10px 35px;
 		text-decoration: none;
 		text-align:center;
 		border-radius:30px;
-		@include gradient-3(42deg, $pink, $blue, $blue);
+		@include gradient-3(42deg, $pink, $lvs-blue, $lvs-blue);
 		background-size:200% 100%;
 		background-position:right center;
 		@include defaultTransition;
 		
-		
 		&:hover{
 			background-position: left center;
+			
+			i{
+				&.right{padding-left:25px;}
+				&left{padding-right:25px}
+			}
 		}
 		
 	}
@@ -87,3 +87,59 @@ hr{
 
 i.right{padding-left:15px; @include defaultTransition;}
 i.left{padding-right:15px; @include defaultTransition;}
+
+
+
+/* ===== Repeated Page Elements ===== */
+
+blockquote{
+	width:80%;
+	display:block;
+	margin:20px 20px 20px 0;
+	border-left:3px solid $lvs-blue;
+	font-weight:bold;
+	padding:20px 20px 10px;
+	
+	.caption{font-size:70%; margin:20px 0 20px;}
+}
+
+.image-wrapper{
+	display:block;
+	margin:0 auto; padding:0;
+	width:100%; height:100%;
+	min-height:100px;
+	background-position: top center;
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-color:transparent;}
+
+#indicate-more{
+	text-align:center;
+	color:$blue;
+	font-size:300%;
+	margin:20px auto;
+}
+
+
+.progressive-section{
+	ul{
+		list-style: none;
+		margin:0 10px; 
+		padding:0;}
+}
+
+
+#indicate-more{
+	position:relative;
+	padding:50px 0;
+	text-align:center;
+	
+	i{
+		position:absolute;
+		top:0;
+		animation-name: bounce-down;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+}

@@ -22,13 +22,13 @@ jQuery(function($){
 	if( $('body').hasClass('home') ){
 		$(window).scroll(function() {
 			if ( $(this).scrollTop() > 50 ) { 
-				$('#header').addClass('stuck');
+				$('#header, #menu-toggle').addClass('stuck');
 			}else{
-				$('#header').removeClass('stuck');
+				$('#header, #menu-toggle').removeClass('stuck');
 			}
 		});
 	}else{
-		$('#header').addClass('stuck');
+		$('#header, #menu-toggle').addClass('stuck');
 		
 		var solutionsNav = $('#solutions-menu');
 		var solutionsNavTop = solutionsNav.offset().top;
@@ -52,12 +52,7 @@ jQuery(function($){
 		});
 		
 		
-	
-		
-		
-		
-		
-		/*
+		/* Solutions Menu Tabs
 		var pathname = window.location.pathname;
 		var solutionsPath = pathname.split("solutions/").pop().replace("/", "");
 		
