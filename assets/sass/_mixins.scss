@@ -40,6 +40,14 @@
     background: linear-gradient($angle, $color-1, $color-2);  
 }
 
+@mixin gradient-3($angle, $color-1, $color-2, $color-3){
+    background: $color-1; 
+    background: -webkit-linear-gradient($angle, $color-1, $color-2, $color-3); 
+    background: -o-linear-gradient($angle, $color-1, $color-2, $color-3); 
+    background: -moz-linear-gradient($angle, $color-1, $color-2, $color-3); 
+    background: linear-gradient($angle, $color-1, $color-2, $color-3);   
+}
+
 @mixin lvs-gradient{
 	background: $lvs-blue;
 	background: -webkit-linear-gradient(42deg, $pink, $lvs-blue ); 

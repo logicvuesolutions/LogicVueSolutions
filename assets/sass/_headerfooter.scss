@@ -24,6 +24,7 @@
 		display:none;
 		letter-spacing:1px;
 		text-align:right;
+		font-size:90%;
 		 
 		ul{
 			list-style:none;
@@ -34,6 +35,7 @@
 				display:inline-block;
 				margin:0 10px;
 				text-align:center;
+				text-shadow:0 1px 0 $black;
 				
 				a{
 					color:$white;
@@ -56,9 +58,9 @@
 		
 		&.open{
 			text-align:center;
-			display:block;
+			z-index: 10;
 			
-			ul li {width:100%;}
+			ul li {width:100%;text-shadow:0 0 0 $white;}
 		}
 	}
 	
@@ -157,7 +159,8 @@
     width: 100%;
 	text-align:center;
 	background:$black;
-	z-index:10;
+	z-index:5;
+	font-size:80%;
 		 
 	ul{
 		display:block;
@@ -173,7 +176,6 @@
 				display:block;
 				padding:5px 15px;
 				color:$white;
-				font-size:80%;
 				cursor: auto;
 				@include defaultTransition;
 				&.active{color:$black; font-weight:bold;}

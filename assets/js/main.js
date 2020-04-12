@@ -52,12 +52,7 @@ jQuery(function($){
 		});
 		
 		
-	
-		
-		
-		
-		
-		/*
+		/* Solutions Menu Tabs
 		var pathname = window.location.pathname;
 		var solutionsPath = pathname.split("solutions/").pop().replace("/", "");
 		

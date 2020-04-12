@@ -4,7 +4,7 @@
 
 html{margin:0; padding:0;}
 
-body, html{height:100%; min-height:100%;}
+body, html{}
 
 body{
 	font-size:18px;
@@ -59,12 +59,18 @@ a{
 		text-decoration: none;
 		text-align:center;
 		border-radius:30px;
-		background:$lvs-blue; 
+		@include gradient-3(42deg, $pink, $lvs-blue, $lvs-blue);
+		background-size:200% 100%;
+		background-position:right center;
 		@include defaultTransition;
-		
 		
 		&:hover{
 			background-position: left center;
+			
+			i{
+				&.right{padding-left:25px;}
+				&left{padding-right:25px}
+			}
 		}
 		
 	}

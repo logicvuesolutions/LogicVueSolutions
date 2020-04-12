@@ -8,7 +8,7 @@
 <div class="content" id="home-content" >
 	<div class="container" >
 		<div class="row" >
-			<div class="col-sm-10" >
+			<div class="col-sm-9" >
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 					<?php the_content(); ?>

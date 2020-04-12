@@ -22,10 +22,6 @@ html {
   margin: 0;
   padding: 0; }
 
-body, html {
-  height: 100%;
-  min-height: 100%; }
-
 body {
   font-size: 18px;
   line-height: 1.6;
@@ -99,12 +95,22 @@ a {
     text-decoration: none;
     text-align: center;
     border-radius: 30px;
-    background: #0c41b2;
+    background: #bc2874;
+    background: -webkit-linear-gradient(42deg, #bc2874, #0c41b2, #0c41b2);
+    background: -o-linear-gradient(42deg, #bc2874, #0c41b2, #0c41b2);
+    background: -moz-linear-gradient(42deg, #bc2874, #0c41b2, #0c41b2);
+    background: linear-gradient(42deg, #bc2874, #0c41b2, #0c41b2);
+    background-size: 200% 100%;
+    background-position: right center;
     -webkit-transition: all ease-in-out .2s;
     -moz-transition: all ease-in-out .2s;
     transition: all ease-in-out .2s; }
     a.button:hover {
       background-position: left center; }
+      a.button:hover i.right {
+        padding-left: 25px; }
+      a.button:hover ileft {
+        padding-right: 25px; }
 
 hr {
   width: 100%;
@@ -200,7 +206,8 @@ blockquote {
     margin: 15px 0;
     display: none;
     letter-spacing: 1px;
-    text-align: right; }
+    text-align: right;
+    font-size: 90%; }
     #header .menu ul {
       list-style: none;
       margin: 0 20px 0;
@@ -208,7 +215,8 @@ blockquote {
       #header .menu ul li {
         display: inline-block;
         margin: 0 10px;
-        text-align: center; }
+        text-align: center;
+        text-shadow: 0 1px 0 #0d1321; }
         #header .menu ul li a {
           color: #fff; }
           #header .menu ul li a:after {
@@ -234,9 +242,10 @@ blockquote {
           background: linear-gradient(42deg, #bc2874, #0c41b2); }
     #header .menu.open {
       text-align: center;
-      display: block; }
+      z-index: 10; }
       #header .menu.open ul li {
-        width: 100%; }
+        width: 100%;
+        text-shadow: 0 0 0 #fff; }
   #header.stuck {
     background: #fff;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -339,7 +348,8 @@ blockquote {
   width: 100%;
   text-align: center;
   background: #0d1321;
-  z-index: 10; }
+  z-index: 5;
+  font-size: 80%; }
   #solutions-menu ul {
     display: block;
     list-style: none;
@@ -355,7 +365,6 @@ blockquote {
         display: block;
         padding: 5px 15px;
         color: #fff;
-        font-size: 80%;
         cursor: auto;
         -webkit-transition: all ease-in-out .2s;
         -moz-transition: all ease-in-out .2s;
@@ -405,10 +414,21 @@ body.home {
   left: 0;
   margin-top: 150px;
   background-attachment: fixed;
-  background-image: url("../images/lvs_blue_wave.png");
+  background-image: url("../images/lvs_blue_wave_02.png");
   background-position: right top;
   background-size: 55%;
   background-repeat: no-repeat; }
+  body.home:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: 25%;
+    background-repeat: no-repeat; }
   body.home h1 {
     font-size: 350%; }
 
@@ -441,8 +461,13 @@ body.body .content {
   padding-bottom: 100px; }
 body.body .repeater-row {
   margin-bottom: 20px; }
+  body.body .repeater-row .image-wrapper {
+    min-height: 300px; }
 
 /* Solutions */
+#solutions-intro {
+  background-image: url("../images/lvs_wave_03.png"); }
+
 #solutions-intro .intro-image {
   z-index: 0;
   margin-top: -150px;
@@ -468,21 +493,38 @@ body.body .repeater-row {
     width: 80%; }
   #header .menu {
     display: block;
-    margin-right: 75px; }
+    margin-right: 0; }
 
   #contact-sidebar {
     padding: 50px 100px 50px 50px; } }
 @media all and (min-width: 992px) {
   body.body .intro {
-    background-position: top right; }
+    background-position: bottom right; }
   body.body .content {
     margin-top: -100px; } }
 @media all and (min-width: 1200px) {
-  #header .menu {
-    display: block;
-    margin-right: -50px; }
+  body {
+    font-size: 20px;
+    line-height: 1.8; }
+    body.home {
+      background-size: 55%; }
+    body.body .intro {
+      min-height: 600px; }
+    body.body .content {
+      margin-top: -200px; }
 
-  body.body .intro {
-    min-height: 600px; }
-  body.body .content {
-    margin-top: -200px; } }
+  #header #site_id {
+    width: 75%; } }
+@media all and (min-width: 1500px) {
+  body {
+    font-size: 22px;
+    line-height: 2; }
+    body.body .intro {
+      min-height: 800px; }
+    body.body .content {
+      margin-top: -300px; }
+
+  .container {
+    max-width: 1400px; }
+    .container.centered {
+      max-width: 1000px; } }

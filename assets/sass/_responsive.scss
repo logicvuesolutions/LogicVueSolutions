@@ -14,7 +14,7 @@
 	
 	#header{
 		#site_id{width:80%;}
-		.menu{display:block; margin-right:75px;}
+		.menu{display:block; margin-right:0;}
 	}
 	
 	#contact-sidebar{padding:50px 100px 50px 50px;}	
@@ -25,21 +25,43 @@
 // Mobile - Desktop
 @media all and (min-width:992px) {
 	body.body{
-		.intro{background-position:top right;}
+		.intro{background-position:bottom right;}
 		.content{margin-top:-100px;}
 	}
 }
 
 // Mobile - Large Screens
 @media all and (min-width:1200px) {
-	#header .menu{display:block; margin-right:-50px;}
-	
-	
-	body.body{
-		.intro{min-height:600px;}
-		.content{margin-top:-200px;}
+	body{
+		font-size:20px;
+		line-height:1.8;
+		
+		&.home{background-size:55%;}
+		
+		&.body{
+			.intro{min-height:600px;}
+			.content{margin-top:-200px;}
+		}
 	}
 	
-	
+	#header{
+		#site_id{width:75%;}
+	}
+}
+
+// Mobile - Stupdi Large Screens 
+@media all and (min-width:1500px){
+	body{
+		font-size:22px;
+		line-height:2;
+		
+		&.body .intro{min-height:800px;}
+		&.body .content{margin-top:-300px;}
+	}
+	.container{
+		max-width:1400px;
+		
+		&.centered{max-width:1000px;}
+	}
 }
 
