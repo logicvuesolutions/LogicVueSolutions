@@ -154,14 +154,15 @@
 /* Solutions Menu */
 
 #solutions-menu{ 
-	position:relative;
+	position:fixed;
     display: block;
+	top:90px;
     width: 100%;
 	text-align:center;
 	background:$black;
 	z-index:5;
 	font-size:80%;
-		 
+	
 	ul{
 		display:block;
 		list-style:none;
@@ -176,18 +177,23 @@
 				display:block;
 				padding:5px 15px;
 				color:$white;
-				cursor: auto;
 				@include defaultTransition;
+				
 				&.active{color:$black; font-weight:bold;}
+				
+				&:hover{@include lvs-gradient;}
 			}
 			
-			// &:hover{background:$white;}
-			// &:hover > a{color:$black;}
-			
-			&.current-menu-item {background:$white; a{color:$black;} }
+			&.current-menu-item {
+				background:$white; 
+				
+				a{color:$black;} 
+			}
+	
 		}
 		
 		&.nav-tabs a.nav-link{border-radius:0; border-color:$black;}
+		
 	}
 	
 	&.stuck{
@@ -209,6 +215,7 @@
 .home #solutions-menu{
 	position:fixed;
 	bottom:0;
+	top:auto;
 	
 	&.stuck{
 		position:fixed; 

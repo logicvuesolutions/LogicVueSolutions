@@ -49,8 +49,6 @@ body.body{
 			z-index:-1;
 			min-height:300px;
 		}
-		
-		#solutions-menu{display:none;}
 	}
 
 	.content{
@@ -67,13 +65,18 @@ body.body{
 }
 
 /* Solutions */
-#solutions-intro{background-image:url("../images/lvs_wave_03.png");}
-#solutions-intro .intro-image{z-index:0; margin-top:-150px; min-height:500px;}
+.solutions.intro{
+	background-image:url("../images/lvs_wave_03.png");
+	
+	.intro-image{
+		z-index:0; 
+		margin-top:-150px; 
+		min-height:500px;}
+	
+}
 
-#solutions-intro #solutions-menu{position:fixed; display:block; top:90px;}
-
-#solutions-content .image-wrapper{min-height:50px; }
+.solutions.content .repeater-row .image-wrapper{min-height:50px; }
 
 /* About us */
 
-#about-content .repeater-row{margin-bottom:50px;}
+.about.content .repeater-row{margin-bottom:50px;}

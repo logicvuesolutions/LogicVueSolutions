@@ -5,7 +5,7 @@
 
 <?php get_header(); ?>
 
-<div class="intro" id="<?php the_field('id'); ?>-intro" >
+<div class="<?php the_field('class'); ?> intro" >
 	<div id="solutions-menu">
 		<?php wp_nav_menu( array( 'theme_location' => 'solutions' ) ); ?>
 	</div><!-- #solutions-menu -->
@@ -22,7 +22,7 @@
 	</div><!-- .container -->
 </div><!-- .content -->
 
-<div class="content" id="<?php the_field('id'); ?>-content" >
+<div class="<?php the_field('class'); ?> content" >
 	<div class="container centered" >
 		<div class="row" >
 			<div class="col" >
