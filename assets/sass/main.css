@@ -285,6 +285,7 @@ blockquote {
   bottom: 0;
   left: 0;
   z-index: 10;
+  font-size: 70%;
   display: none; }
   #solutions-menu .menu {
     width: 100%;
@@ -353,7 +354,8 @@ body.body #menu-toggle span {
 body.body #solutions-menu {
   top: 90px;
   left: 0;
-  bottom: auto; }
+  bottom: auto;
+  font-size: 90%; }
 
 /* ==========================================
 	Individual Page Elements
@@ -460,7 +462,7 @@ body.body .repeater-row {
           color: #fff; }
 
   #solutions-menu {
-    display: none; }
+    display: block; }
 
   body.body #menu-toggle span {
     background: #0d1321; }
