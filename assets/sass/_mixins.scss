@@ -17,6 +17,13 @@
     box-shadow: $top $left $blur $color;
 }
 
+// Default Shadow
+@mixin defaultShadow {
+    -webkit-box-shadow:0 0px 20px 0 rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, .2);
+}
+
 // Border Radius
 @mixin border-radius($radius) {
 	-webkit-border-radius:$radius;

@@ -7,29 +7,51 @@
 }
 
 // Mobile - Default 
-@media all and (max-width:768px) {}
+@media all and (max-width:768px) {
+	#site_id{width:30%;}
+	body.home{background-position:right 100px;}
+}
 
 // Mobile - Tablets
 @media all and (min-width:768px) {
-	
-	#header{
-		#site_id{width:80%;}
-		.menu{display:block; margin-right:0;}
+	#site_id{width:70%;}
+	#header .menu{
+		background:$trans;
+		display:block;
+		padding:0;
+		
+		ul{
+			margin-right:100px;
+			text-align:right;
+			
+			li{
+				width:auto; 
+				display:inline-block; 
+				margin:0 10px;
+				
+				a{font-size:100%; 
+					color:$white;}
+				
+			}
+		}
 	}
 	
-	#contact-sidebar{padding:50px 100px 50px 50px;}	
+	#solutions-menu{display:none;}
+	
+	body.body #menu-toggle span{background:$black;}
+	body.body #header .menu ul li a{color:$black;}
 	
 }
 
 
 // Mobile - Desktop
 @media all and (min-width:992px) {
+	#header .menu ul{margin-right:100px;}
 	body.body{
 		.intro{background-position:bottom right;}
 		.content{margin-top:-100px;}
 	}
 }
-
 // Mobile - Large Screens
 @media all and (min-width:1200px) {
 	body{
@@ -44,13 +66,11 @@
 		}
 	}
 	
-	#header{
-		#site_id{width:75%;}
-	}
 }
 
-// Mobile - Stupdi Large Screens 
+// Mobile - Stupid Large Screens 
 @media all and (min-width:1500px){
+	#site_id{width:100%;}
 	body{
 		font-size:22px;
 		line-height:2;

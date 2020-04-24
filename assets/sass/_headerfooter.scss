@@ -2,86 +2,13 @@
 /* ==========================================
 	Sticky Nav
 ========================================== */
-#header{
-	position:fixed;
-	top:0; left:0;
-	width:100%; height:auto;
-	min-height:90px;
-	z-index:10;
-	padding:10px 0 0;
-	margin:0 auto;
-	@include defaultTransition;
-	
-	#site_id{
-		display:inline-block;
-		width:40%; height:auto;
-		
-		img{width:100%; height:auto;}
-	}
-	
-	.menu{
-		margin:15px 0;
-		display:none;
-		letter-spacing:1px;
-		text-align:right;
-		font-size:90%;
-		 
-		ul{
-			list-style:none;
-			margin:0 20px 0;
-			padding:0;
-			
-			li{
-				display:inline-block;
-				margin:0 10px;
-				text-align:center;
-				text-shadow:0 1px 0 $black;
-				
-				a{
-					color:$white;
-					
-					&:after{
-						content:'';
-						display:block;
-						position:relative;
-						background:transparent;
-						width:25px; height:4px;
-						border-radius:20px;
-						margin:8px auto;
-					}
-					&:hover:after{@include lvs-gradient;}
-				}
-				
-				&.current-menu-item a:after{@include lvs-gradient;}
-			}
-		}
-		
-		&.open{
-			text-align:center;
-			z-index: 10;
-			
-			ul li {width:100%;text-shadow:0 0 0 $white;}
-		}
-	}
-	
-	
-	&.stuck{
-		background:$white;
-		@include box-shadow(0, 0, 10px, rgba(0,0,0,.3));
-		
-		.menu li a{color:$black;}
-	}
-	
-}
-
-/* Menu Toggle */
-
 #menu-toggle{
 	position:fixed;
 	z-index:30;
 	width:35px; height:35px;
 	top:35px; right:50px;
 	display:inline-block;
+	cursor:pointer;
 
 	span{
 		position:absolute;
@@ -100,11 +27,10 @@
 	&:hover{
 		> span{@include lvs-gradient;}
 	}
-
+	
 	&.open{
 
 		> span{@include lvs-gradient; @include defaultTransition;}
-
 		> span:first-of-type{transform:rotate(-45deg); top:9px;}
 		> span:last-of-type{width:100%; transform:rotate(45deg);}
 	}
@@ -114,121 +40,127 @@
 	}
 }
 
-
-
-/* Side Drawer */
-
-#contact-sidebar{
+#header{
 	position:fixed;
-	top:0; right:-100%;
-	height:100%; width:85%;
-	max-width:500px;
-	padding:50px 20px 20px;
-	z-index:20;
-	overflow:scroll;
-	background:$white;
-	color:$black;
-	@include defaultTransition;
-	
-	&.open{right:0;}
-	
-}
-
-#overlay{
-	width:100%; height:100%;
 	top:0; left:0;
-	position:fixed;
-	display:block;
-	z-index:-10;
-	background:rgba(0,0,0,0);
-	@include defaultTransition;
+	width:100%; height:auto;
+	min-height:90px;
+	z-index:20;
+	padding:10px 0 0;
+	margin:0 auto;
 	
-	&.open{
-		z-index:19;
-		background:rgba(0,0,0,.9);
+	.container{margin:0; padding:0;}
+	
+	#site_id{
+		margin:0 auto;
+		display:block;
 	}
+	
+	.menu{
+		margin:20px 0 0;
+		padding:10px 0 0;
+		background:$white;
+		display:none;
+		
+		ul{
+			list-style:none;
+			margin:0; padding:0;
+			
+			li{
+				display:block;
+				text-align:center;
+				
+				a{
+					padding:5px 0;
+					color:$black;
+					font-weight:400;
+					font-size:85%;
+					display:block;
+					
+					&:after{
+						content:'';
+						display:block;
+						position:relative;
+						background:transparent;
+						width:25px; height:4px;
+						border-radius:20px;
+						margin:8px auto;
+					}
+					
+					&:hover:after{@include lvs-gradient;}
+				}
+				
+				&.current-menu-item a:after{@include lvs-gradient;}
+			}
+		}
+		
+	}
+
 }
 
-
-
-/* Solutions Menu */
-
-#solutions-menu{ 
-	position:fixed;
-    display: block;
-	top:90px;
-    width: 100%;
-	text-align:center;
+#solutions-menu{
 	background:$black;
-	z-index:5;
-	font-size:80%;
+	width:100%; height:auto;
+	position:fixed; 
+	bottom:0; left:0; 
+	z-index:10;
+	display:none;
 	
-	ul{
-		display:block;
-		list-style:none;
+	.menu{
+		width:100%; 
 		margin:0; padding:0;
-		border-bottom-color:$trans;
-
+		text-align:center;
+		
 		li{
-			display:inline-block; 
-			@include defaultTransition;
-
+			display:inline-block;
+			
 			a{
 				display:block;
-				padding:5px 15px;
+				padding:5px 20px;
 				color:$white;
-				@include defaultTransition;
-				
-				&.active{color:$black; font-weight:bold;}
 				
 				&:hover{@include lvs-gradient;}
 			}
-			
-			&.current-menu-item {
-				background:$white; 
-				
-				a{color:$black;} 
-			}
-	
 		}
-		
-		&.nav-tabs a.nav-link{border-radius:0; border-color:$black;}
-		
-	}
-	
-	&.stuck{
-		position:fixed; 
-		top:90px; 
-		bottom:auto;
-		z-index:5;
-		
-		// ul li a{padding:5px 30px;}
-	}
-	
-	&.sticky{
-		position:relative;
-		bottom:auto;
-		z-index:5;
 	}
 }
 
-.home #solutions-menu{
+#overlay{
+	background:#000;
+	width:100%; height:100%;
 	position:fixed;
-	bottom:0;
-	top:auto;
+	top:0; left:0;
+	z-index:10;
+	@include opacity(0, 0);
+	@include defaultTransition;
 	
-	&.stuck{
-		position:fixed; 
-		top:90px; 
-		bottom:auto;
-		z-index:2;
-		
-		ul li a{padding:0 30px;}
+	&.open{
+		@include opacity(90, .9);
 	}
+}
+
+#contact-sidebar{
+	display:block;
+	position:fixed;
+	top:0; right:-100%;
+	width:100%;
+	max-width:500px;
+	height:100%;
+	padding:150px 50px 50px;
+	background:$white;
+	z-index:15;
+	@include defaultTransition;
 	
-	&.sticky{
-		position:relative;
-		bottom:auto;
-		z-index:2;
+	&.open{
+		display:block;
+		background:$white;
+		right:0;
 	}
+}
+
+
+body.body{ 
+	#header{background: $white; @include defaultShadow; }
+	#menu-toggle span{background: $black;}
+	#solutions-menu{top:90px; left:0; bottom:auto;}
 }

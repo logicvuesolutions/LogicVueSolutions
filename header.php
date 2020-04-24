@@ -78,7 +78,7 @@
 			<div class="row" >
 				<div class="col" >
 					<a href="<?php bloginfo('url'); ?>" id="site_id" >
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/LogicVueSolutions_logo.png" alt="LogicVue Solutions" >
+						<?php include_once('assets/images/LVS_logo.svg'); ?>
 					</a><!-- #site_id -->
 				</div><!-- .col-sm -->
 				<div class="col-sm-12 col-md-9" >
