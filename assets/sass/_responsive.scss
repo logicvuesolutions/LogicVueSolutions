@@ -14,7 +14,8 @@
 
 // Mobile - Tablets
 @media all and (min-width:768px) {
-	#site_id{width:70%;}
+	#site_id{width:80%;}
+	#menu-toggle span{background:$white;}
 	#header .menu{
 		background:$trans;
 		display:block;

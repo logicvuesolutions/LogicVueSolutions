@@ -92,7 +92,7 @@ i.right{padding-left:15px; @include defaultTransition;}
 i.left{padding-right:15px; @include defaultTransition;}
 
 
-
+.content, .intro{display:none;}
 /* ===== Repeated Page Elements ===== */
 
 blockquote{

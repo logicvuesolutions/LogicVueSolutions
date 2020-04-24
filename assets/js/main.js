@@ -1,7 +1,13 @@
 jQuery(function($){
 	
 	$(window).on("load resize", function() {
-		$('#header, #menu-toggle, #contact-sidebar, #overlay').removeClass('open');
+		$('#header, #menu-toggle').fadeIn(1000);
+		$('.intro').delay(500).fadeIn(1000);
+		$('body.home .content').delay(500).fadeIn(1000);
+		$('body.body .content').delay(1000).fadeIn(1000);
+		
+		
+		$('#header, #menu-toggle, #contact-sidebar, #overlay').removeClass('open')
 		
         if ($(window).width() >= 768) {
 			$('#menu-toggle').on('click', function(){
@@ -16,16 +22,6 @@ jQuery(function($){
 			});
 		}
 	});
-	
-	
-/* Header setup on scroll */
-	
-	$(window).scroll(function() {
-		if ( $(this).scrollTop() > 50 ) { 
-			$('#header').addClass('stuck');
-		}
-	});
-	
 	
 });
 
