@@ -333,7 +333,7 @@ blockquote {
   width: 100%;
   max-width: 500px;
   height: 100%;
-  padding: 50px;
+  padding: 150px 50px 50px;
   background: #fff;
   z-index: 15;
   -webkit-transition: all ease-in-out .2s;
@@ -343,6 +343,9 @@ blockquote {
     display: block;
     background: #fff;
     right: 0; }
+
+body.home #contact-sidebar {
+  padding: 50px; }
 
 body.body #header {
   background: #fff;

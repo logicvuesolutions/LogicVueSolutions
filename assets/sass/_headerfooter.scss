@@ -145,7 +145,7 @@
 	width:100%;
 	max-width:500px;
 	height:100%;
-	padding:50px;
+	padding:150px 50px 50px;
 	background:$white;
 	z-index:15;
 	@include defaultTransition;
@@ -157,6 +157,7 @@
 	}
 }
 
+body.home #contact-sidebar{ padding:50px; }
 
 body.body{ 
 	#header{background: $white; @include defaultShadow; }
