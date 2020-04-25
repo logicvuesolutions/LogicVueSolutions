@@ -7,7 +7,7 @@
 	z-index:30;
 	width:35px; height:35px;
 	top:35px; right:50px;
-	display:none;
+	display:inline-block;
 	cursor:pointer;
 
 	span{
@@ -44,7 +44,7 @@
 	z-index:20;
 	padding:10px 0 0;
 	margin:0 auto;
-	display:none;
+	display:block;
 	
 	.container{margin:0; padding:0;}
 	
