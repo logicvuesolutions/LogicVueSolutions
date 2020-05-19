@@ -23,17 +23,20 @@ jQuery(function($){
 	$(window).on("load", function() {
 		$('.load-bar').addClass("scaleInOut");
 		
-		$('#header, #footer, #solutions-menu, #menu-toggle').delay(600).queue(function(animateStep1){
-			$(this).addClass("fadeIn");
-			animateStep1();
+		$(window).delay(600).queue(function(animateBackground){
+			$('.bg, .intro').addClass("fadeIn");
+			animateBackground();
 		});	
-		$('.intro .container, body.home .content h1').delay(1000).queue(function(animateStep2){
-			$(this).addClass("slideIn");
-			animateStep2();
+		
+		$(window).delay(600).queue(function(animateHeader){
+			$('#header, #footer, #solutions-menu, #menu-toggle').addClass("fadeIn");
+			$('.intro .container, body.home .content h1').addClass("slideIn");
+			animateHeader();
 		});	
-		$('body.body .content, body.home .content p, body.home .content a').delay(1500).queue(function(animateStep3){
-			$(this).addClass("slideIn");
-			animateStep3();
+			
+		$(window).delay(800).queue(function(animateContent){
+			$('body.body .content, body.home .content p, body.home .content a').addClass("slideIn");
+			animateContent();
 		});
 		
 	});

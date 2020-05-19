@@ -39,6 +39,7 @@
 	<!-- End Google Tag Manager (noscript) -->
 	
 	<div class="load-bar" ></div>
+	<div class="bg" ></div>
 	
 	<div id="menu-toggle" >
 		<span></span>
