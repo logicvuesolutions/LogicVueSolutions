@@ -7,38 +7,6 @@
 	<meta property="og:site_name" content="<?php get_bloginfo('name') ?>">
 	<meta property="og:url" content="http://<?php $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
 	
-	<?php if (get_field('seo_title')): ?>
-		<title><?php the_field('seo_title');  ?></title>
-		<meta property="og:title" content="<?php the_field('seo_title');  ?>">
-	<?php else: ?>
-		<title><?php the_field('meta_title', 'options');  ?></title>
-		<meta property="og:title" content="<?php the_field('meta_title', 'options') ?>" >
-	<?php endif; ?>
-	
-	<?php if (get_field('seo_image')): ?>
-		<title><?php the_field('seo_image');  ?></title>
-		<meta property="og:image" content="<?php the_field('seo_image');  ?>">
-	<?php else: ?>
-		<title><?php the_field('meta_image', 'options');  ?></title>
-		<meta property="og:image" content="<?php the_field('meta_image', 'options'); ?>" >
-	<?php endif; ?>
-	
-	<?php if (get_field('seo_description')): ?>
-		<title><?php the_field('seo_description');  ?></title>
-		<meta property="og:description" content="<?php the_field('seo_description');  ?>">
-	<?php else: ?>
-		<title><?php the_field('meta_description', 'options');  ?></title>
-		<meta property="og:description" content="<?php the_field('meta_description', 'options'); ?>" >
-	<?php endif; ?>
-	
-	<?php if (get_field('seo_keywords')): ?>
-		<title><?php the_field('seo_keywords');  ?></title>
-		<meta property="og:keywords" content="<?php the_field('seo_keywords');  ?>">
-	<?php else: ?>
-		<title><?php the_field('meta_keywords', 'options');  ?></title>
-		<meta property="og:keywords" content="<?php the_field('meta_description', 'options'); ?>" >
-	<?php endif; ?>	
-	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	
 	<script src="https://kit.fontawesome.com/391389ab70.js" crossorigin="anonymous"></script>
@@ -61,7 +29,6 @@
 	})(window,document,'script','dataLayer','GTM-K5HQNXH');</script>
 	<!-- End Google Tag Manager -->
 	
-	
 	 <?php wp_head(); ?>
 </head>
 <body class="<?php if (is_front_page()) echo 'home'; if (!is_front_page()) echo 'body'; ?>">
@@ -70,6 +37,8 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5HQNXH"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+	
+	<div class="load-bar" ></div>
 	
 	<div id="menu-toggle" >
 		<span></span>

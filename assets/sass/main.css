@@ -6,16 +6,6 @@
 	Mixins
 ========================================== */
 /* ==========================================
-	Animations
-========================================== */
-@keyframes bounce-down {
-  0% {
-    color: #fff;
-    margin-top: -10px; }
-  100% {
-    color: #46ade2;
-    margin-top: 20px; } }
-/* ==========================================
 	Globals
 ========================================== */
 html {
@@ -135,7 +125,7 @@ i.left {
   -moz-transition: all ease-in-out .2s;
   transition: all ease-in-out .2s; }
 
-/* ===== Repeated Page Elements ===== */
+/* =====  Repeated Page Elements  ===== */
 blockquote {
   width: 80%;
   display: block;
@@ -175,7 +165,10 @@ blockquote {
   top: 35px;
   right: 50px;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+  filter: alpha(opacity=0);
+  opacity: 0; }
   #menu-toggle span {
     position: absolute;
     width: 100%;
@@ -227,12 +220,15 @@ blockquote {
   z-index: 20;
   padding: 10px 0 0;
   margin: 0 auto;
-  display: block; }
+  display: block;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+  filter: alpha(opacity=0);
+  opacity: 0; }
   #header .container {
     margin: 0 auto;
     padding: 0; }
   #header #site_id {
-    margin: 0 auto;
+    margin: 0;
     display: block; }
   #header .menu {
     margin: 20px 0 0;
@@ -283,7 +279,10 @@ blockquote {
   left: 0;
   z-index: 10;
   font-size: 70%;
-  display: none; }
+  display: none;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+  filter: alpha(opacity=0);
+  opacity: 0; }
   #solutions-menu .menu {
     width: 100%;
     margin: 0;
@@ -341,6 +340,19 @@ blockquote {
     background: #fff;
     right: 0; }
 
+/* ===== Loading Bar ===== */
+.load-bar {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #0c41b2;
+  z-index: 99999;
+  transform: scaleX(0); }
+
+/* =====  Page Specific Header + Footer Styles  ===== */
 body.home #contact-sidebar {
   padding: 50px; }
 
@@ -360,7 +372,7 @@ body.body #solutions-menu {
 /* ==========================================
 	Individual Page Elements
 ========================================== */
-/* Homepage */
+/* =====  Homepage  ===== */
 body.home {
   position: relative;
   top: 0;
@@ -384,8 +396,13 @@ body.home {
     background-repeat: no-repeat; }
   body.home h1 {
     font-size: 350%; }
+  body.home .content h1, body.home .content p, body.home .content a {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transform: translateY(10%); }
 
-/*Not Homepage*/
+/* =====  Other Page  ===== */
 body.body .intro {
   position: relative;
   top: 0;
@@ -404,12 +421,21 @@ body.body .intro {
   body.body .intro .image-wrapper {
     z-index: -1;
     min-height: 300px; }
+  body.body .intro .container {
+    transform: translateY(10%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+    filter: alpha(opacity=0);
+    opacity: 0; }
 body.body .content {
   position: relative;
   top: 0;
   left: 0;
   background: #f5f5f5;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  transform: translateY(10%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+  filter: alpha(opacity=0);
+  opacity: 0; }
 body.body .repeater-row {
   margin-bottom: 20px; }
   body.body .repeater-row .image-wrapper {
@@ -430,6 +456,41 @@ body.body .repeater-row {
 .about.content .repeater-row {
   margin-bottom: 50px; }
 
+/* ==========================================
+	Animations
+========================================== */
+.fadeIn {
+  animation: fadeIn .8s ease-in .3s forwards; }
+
+.slideIn {
+  animation: fadeIn .15s ease-in .6s forwards, slideIn .3s ease-in .6s forwards; }
+
+.scaleInOut {
+  animation: scaleInOut .5s ease-in .5s forwards; }
+
+/* ===== Keyframes ===== */
+@keyframes fadeIn {
+  60% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+    filter: alpha(opacity=0);
+    opacity: 0; }
+  100% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+    filter: alpha(opacity=1);
+    opacity: 1; } }
+@keyframes slideIn {
+  100% {
+    transform: translateY(0); } }
+@keyframes scaleInOut {
+  98% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+    filter: alpha(opacity=1);
+    opacity: 1; }
+  100% {
+    transform: scaleX(1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+    filter: alpha(opacity=0);
+    opacity: 0; } }
 /* ==========================================
 	Responsive Styles
 ========================================== */

@@ -2,7 +2,32 @@
 	Animations
 ========================================== */
 
-@keyframes bounce-down{
-	0%{color:$white; margin-top:-10px;}
-	100%{color:$blue; margin-top:20px;}
+.fadeIn{
+	animation: fadeIn .8s ease-in .3s forwards;
+}
+
+.slideIn{
+	animation: fadeIn .15s ease-in .6s forwards, slideIn .3s ease-in .6s forwards;
+}
+
+.scaleInOut{
+	animation: scaleInOut .5s ease-in .5s forwards;
+}
+
+
+
+/* ===== Keyframes ===== */
+
+@keyframes fadeIn{
+	60%{@include opacity(0,0);}
+	100%{@include opacity(1,1);}
+}
+
+@keyframes slideIn{
+	100%{transform:translateY(0);}
+}
+
+@keyframes scaleInOut{
+	98%{@include opacity(1,1);}
+	100%{transform:scaleX(1); @include opacity(0,0);}
 }
