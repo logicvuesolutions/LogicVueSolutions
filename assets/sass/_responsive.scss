@@ -69,20 +69,26 @@
 	
 }
 
-// Mobile - Stupid Large Screens 
+// Mobile - Really Large Screens 
 @media all and (min-width:1500px){
-	#site_id{width:100%;}
+	#site_id{width:60%;}
 	body{
-		font-size:22px;
-		line-height:2;
+		font-size:24px;
+		line-height:2.2;
 		
-		&.body .intro{min-height:800px;}
+		&.body .intro{min-height:800px; margin-top:150px;}
 		&.body .content{margin-top:-300px;}
+		
 	}
 	.container{
 		max-width:1400px;
 		
 		&.centered{max-width:1000px;}
 	}
+	
+	#header .menu{margin-top:10px;}
+	
+	#header .menu ul li a,
+	#solutions-menu .menu li a{font-weight:600; font-size:70%;}
 }
 
