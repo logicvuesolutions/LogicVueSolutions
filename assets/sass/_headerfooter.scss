@@ -159,7 +159,35 @@
 	}
 }
 
-/* ===== Loading Bar ===== */
+/* =====  Footer  ===== */
+#footer{
+	@include opacity(0,0);
+	background: $lt-blue;
+}
+
+#quoteCarousel{
+	padding:50px 0;
+	
+	.image-wrapper{width:70%;}
+	
+	.quote:before{
+		content:'';
+		display:block;
+		position:absolute;
+		width:40px; height:40px;
+		left:-7px; top:-7px;
+		z-index:0;
+		background-image:url("../images/quote.png");
+		background-size:contain;
+		background-position:center center;
+		background-repeat:no-repeat;}
+	
+	h5{font-weight:bold;}
+}
+
+
+
+/* =====  Loading Bar  ===== */
 .load-bar{
 	content:'';
 	position:fixed;
@@ -179,5 +207,6 @@ body.home #contact-sidebar{ padding:50px; }
 body.body{ 
 	#header{background: $white; @include defaultShadow; }
 	#menu-toggle span{background: $black;}
+	#menu-toggle:hover > span{@include lvs-gradient;}
 	#solutions-menu{top:90px; left:0; bottom:auto; font-size:90%;}
 }

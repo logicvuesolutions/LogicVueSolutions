@@ -37,3 +37,7 @@ add_action('init', 'register_my_menus');
 
 // register custom navigation walker
 require_once('wp_bootstrap_navwalker.php');
+
+
+// remove image size limit filter
+add_filter( 'big_image_size_threshold','__return_false');

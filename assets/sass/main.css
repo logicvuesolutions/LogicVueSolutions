@@ -31,7 +31,7 @@ body {
   max-width: 1200px; }
 
 .container.centered {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto; }
 
 .container-fluid {
@@ -340,7 +340,34 @@ blockquote {
     background: #fff;
     right: 0; }
 
-/* ===== Loading Bar ===== */
+/* =====  Footer  ===== */
+#footer {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: #d3f3ee; }
+
+#quoteCarousel {
+  padding: 50px 0; }
+  #quoteCarousel .image-wrapper {
+    width: 70%; }
+  #quoteCarousel .quote:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: -7px;
+    top: -7px;
+    z-index: 0;
+    background-image: url("../images/quote.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  #quoteCarousel h5 {
+    font-weight: bold; }
+
+/* =====  Loading Bar  ===== */
 .load-bar {
   content: '';
   position: fixed;
@@ -363,6 +390,12 @@ body.body #header {
   box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2); }
 body.body #menu-toggle span {
   background: #0d1321; }
+body.body #menu-toggle:hover > span {
+  background: #0c41b2;
+  background: -webkit-linear-gradient(42deg, #bc2874, #0c41b2);
+  background: -o-linear-gradient(42deg, #bc2874, #0c41b2);
+  background: -moz-linear-gradient(42deg, #bc2874, #0c41b2);
+  background: linear-gradient(42deg, #bc2874, #0c41b2); }
 body.body #solutions-menu {
   top: 90px;
   left: 0;
@@ -405,7 +438,7 @@ body.body .intro {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 500px;
+  min-height: 550px;
   margin-top: 100px;
   padding-top: 50px;
   position: relative;
@@ -420,7 +453,7 @@ body.body .intro {
     z-index: 1; }
   body.body .intro .image-wrapper {
     z-index: -1;
-    min-height: 300px; }
+    min-height: 350px; }
   body.body .intro .container {
     transform: translateY(10%);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
