@@ -61,6 +61,10 @@ h2 {
   line-height: 1.8;
   font-weight: 700; }
 
+h3 {
+  font-size: 100%;
+  font-weight: 700; }
+
 p {
   margin-bottom: 20px; }
 
@@ -68,14 +72,13 @@ strong {
   font-weight: 700; }
 
 a {
-  color: #0d1321;
+  color: #741865;
   -webkit-transition: all ease-in-out .2s;
   -moz-transition: all ease-in-out .2s;
   transition: all ease-in-out .2s;
   cursor: pointer; }
   a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: #fff;
+    color: #741865;
     outline: none; }
   a.button {
     position: relative;
@@ -247,7 +250,10 @@ blockquote {
           color: #0d1321;
           font-weight: 400;
           font-size: 85%;
-          display: block; }
+          display: block;
+          text-decoration: none; }
+          #header .menu ul li a:hover {
+            text-decoration: none; }
           #header .menu ul li a:after {
             content: '';
             display: block;
