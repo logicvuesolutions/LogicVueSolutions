@@ -535,13 +535,14 @@ body.body .repeater-row {
 ========================================== */
 @media all and (max-width: 768px) {
   #site_id {
-    width: 30%; }
+    width: 40%; }
 
   body.home {
     background-position: right 100px; } }
 @media all and (min-width: 768px) {
   #site_id {
-    width: 80%; }
+    width: 100%;
+    margin-left: 20px; }
 
   #menu-toggle span {
     background: #fff; }
@@ -589,7 +590,7 @@ body.body .repeater-row {
       margin-top: -200px; } }
 @media all and (min-width: 1500px) {
   #site_id {
-    width: 60%; }
+    width: 80%; }
 
   body {
     font-size: 24px;

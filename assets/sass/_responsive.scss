@@ -8,13 +8,13 @@
 
 // Mobile - Default 
 @media all and (max-width:768px) {
-	#site_id{width:30%;}
+	#site_id{width:40%;}
 	body.home{background-position:right 100px;}
 }
 
 // Mobile - Tablets
 @media all and (min-width:768px) {
-	#site_id{width:80%;}
+	#site_id{width:100%; margin-left:20px;}
 	#menu-toggle span{background:$white;}
 	#header .menu{
 		background:$trans;
@@ -71,7 +71,7 @@
 
 // Mobile - Really Large Screens 
 @media all and (min-width:1500px){
-	#site_id{width:60%;}
+	#site_id{width:80%;}
 	body{
 		font-size:24px;
 		line-height:2.2;
