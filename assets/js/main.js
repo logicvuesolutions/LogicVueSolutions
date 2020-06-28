@@ -7,7 +7,7 @@ jQuery(function($){
         if ($(window).width() >= 768) {
 			$('#menu-toggle').on('click', function(){
 				$(this).toggleClass('open');
-				$('#contact-sidebar, #overlay').toggleClass('open');
+				$('#site_id, #contact-sidebar, #overlay').toggleClass('open');
 			});
 			
 		}else{

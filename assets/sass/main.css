@@ -233,6 +233,18 @@ blockquote {
   #header #site_id {
     margin: 0;
     display: block; }
+    #header #site_id g#LogicVue path {
+      fill: #0d1321; }
+    #header #site_id g#Solutions path {
+      fill: #767272; }
+    #header #site_id g#mark .bottom {
+      opacity: 0.5;
+      fill: #46ade2; }
+    #header #site_id g#mark .top {
+      fill: #0c41b2; }
+    #header #site_id.open g#LogicVue path {
+      fill: #fff;
+      opacity: .8; }
   #header .menu {
     margin: 20px 0 0;
     padding: 10px 0 0;
@@ -249,8 +261,10 @@ blockquote {
           padding: 5px 0;
           color: #0d1321;
           font-weight: 400;
-          font-size: 85%;
+          font-size: 70%;
           display: block;
+          letter-spacing: 1px;
+          text-transform: uppercase;
           text-decoration: none; }
           #header .menu ul li a:hover {
             text-decoration: none; }
@@ -559,7 +573,6 @@ body.body .repeater-row {
         display: inline-block;
         margin: 0 10px; }
         #header .menu ul li a {
-          font-size: 100%;
           color: #fff; }
 
   #solutions-menu {

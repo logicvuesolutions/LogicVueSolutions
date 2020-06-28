@@ -52,6 +52,15 @@
 	#site_id{
 		margin:0;
 		display:block;
+		
+		g#LogicVue path{fill:$black;}
+		g#Solutions path{fill:$grey;}
+		g#mark .bottom{opacity:0.5;fill:$blue;}
+		g#mark .top{fill:$lvs-blue;}
+		
+		&.open{
+			g#LogicVue path{fill:$white; opacity:.8;}
+		}
 	}
 	
 	.menu{
@@ -72,8 +81,10 @@
 					padding:5px 0;
 					color:$black;
 					font-weight:400;
-					font-size:85%;
+					font-size:70%;
 					display:block;
+					letter-spacing:1px;
+					text-transform:uppercase;
 					text-decoration: none;
 					
 					&:hover{text-decoration: none;}
