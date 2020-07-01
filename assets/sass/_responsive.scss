@@ -8,45 +8,15 @@
 
 // Mobile - Default 
 @media all and (max-width:768px) {
-	#site_id{width:40%;}
 	body.home{background-position:right 100px;}
 }
 
 // Mobile - Tablets
-@media all and (min-width:768px) {
-	#site_id{width:100%; margin-left:20px;}
-	#menu-toggle span{background:$white;}
-	#header .menu{
-		background:$trans;
-		display:block;
-		padding:0;
-		
-		ul{
-			margin-right:100px;
-			text-align:right;
-			
-			li{
-				width:auto; 
-				display:inline-block; 
-				margin:0 10px;
-				
-				a{color:$white;}
-				
-			}
-		}
-	}
-	
-	#solutions-menu{display:block;}
-	
-	body.body #menu-toggle span{background:$black;}
-	body.body #header .menu ul li a{color:$black;}
-	
-}
+@media all and (min-width:768px) {}
 
 
 // Mobile - Desktop
 @media all and (min-width:992px) {
-	#header .menu ul{margin-right:100px;}
 	body.body{
 		.intro{background-position:bottom right;}
 		.content{margin-top:-100px;}
@@ -70,7 +40,6 @@
 
 // Mobile - Really Large Screens 
 @media all and (min-width:1500px){
-	#site_id{width:80%;}
 	body{
 		font-size:24px;
 		line-height:2.2;
@@ -85,9 +54,5 @@
 		&.centered{max-width:1000px;}
 	}
 	
-	#header .menu{margin-top:10px;}
-	
-	#header .menu ul li a,
-	#solutions-menu .menu li a{font-weight:600; font-size:70%;}
 }
 

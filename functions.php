@@ -29,7 +29,8 @@ function register_my_menus() {
 	register_nav_menus(
 		array(
 			'header' => __('Header'),
-			'solutions' => __('Solutions')
+			'solutions' => __('Solutions'),
+			'mainMenu' => __('Main Menu')
 		)
 	);
 }

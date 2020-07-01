@@ -2,20 +2,16 @@ jQuery(function($){
 	
 	$(window).on("load resize", function() {
 		
-		$('#header, #menu-toggle, #contact-sidebar, #overlay').removeClass('open')
+		$('#menu-toggle, #bg-menu, #bg-menu-cover, #header').removeClass('open');
+		$('#bg-menu .col').fadeOut();
 		
-        if ($(window).width() >= 768) {
 			$('#menu-toggle').on('click', function(){
 				$(this).toggleClass('open');
-				$('#site_id, #contact-sidebar, #overlay').toggleClass('open');
+				$('#bg-menu, #bg-menu-cover').toggleClass('open');
+				$('#header').delay(300).toggleClass('open');
+				$('#bg-menu .col').delay(300).fadeToggle(800);
 			});
-			
-		}else{
-			$('#menu-toggle').on('click', function(){
-				$(this).toggleClass('open');
-				$('.menu').toggle();
-			});
-		}
+		
 			
 	});
 	

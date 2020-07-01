@@ -1,205 +1,6 @@
 /* ==========================================
-	Sticky Nav
+	Header
 ========================================== */
-#menu-toggle{
-	position:fixed;
-	z-index:30;
-	width:35px; height:35px;
-	top:35px; right:50px;
-	display:inline-block;
-	cursor:pointer;
-	@include opacity(0,0);
-
-	span{
-		position:absolute;
-		width:100%;
-		height:4px;
-		background:$black;
-		border-radius:20px;
-		margin:4px 0;
-		float:right;
-		@include defaultTransition;
-
-		&:first-of-type{width:100%; top:0; right:0;}
-		&:last-of-type{width:65%; top:10px; right:0;}
-	}
-
-	&:hover{
-		> span{@include lvs-gradient;}
-	}
-	
-	&.open{
-
-		> span{@include lvs-gradient; @include defaultTransition;}
-		> span:first-of-type{transform:rotate(-45deg); top:9px;}
-		> span:last-of-type{width:100%; transform:rotate(45deg);}
-	}
-}
-
-#header{
-	position:fixed;
-	top:0; left:0;
-	width:100%; height:auto;
-	min-height:90px;
-	z-index:20;
-	padding:10px 0 0;
-	margin:0 auto;
-	display:block;
-	@include opacity(0,0);
-	
-	.container{margin:0 auto; padding:0;}
-	
-	#site_id{
-		margin:0;
-		display:block;
-		
-		g#LogicVue path{fill:$black;}
-		g#Solutions path{fill:$grey;}
-		g#mark .bottom{opacity:0.5;fill:$blue;}
-		g#mark .top{fill:$lvs-blue;}
-		
-		&.open{
-			g#LogicVue path{fill:$white; opacity:.8;}
-		}
-	}
-	
-	.menu{
-		margin:20px 0 0;
-		padding:10px 0 0;
-		background:$white;
-		display:none;
-		
-		ul{
-			list-style:none;
-			margin:0; padding:0;
-			
-			li{
-				display:block;
-				text-align:center;
-				
-				a{
-					padding:5px 0;
-					color:$black;
-					font-weight:400;
-					font-size:70%;
-					display:block;
-					letter-spacing:1px;
-					text-transform:uppercase;
-					text-decoration: none;
-					
-					&:hover{text-decoration: none;}
-					
-					&:after{
-						content:'';
-						display:block;
-						position:relative;
-						background:transparent;
-						width:25px; height:4px;
-						border-radius:20px;
-						margin:8px auto;
-					}
-					
-					&:hover:after{@include lvs-gradient;}
-				}
-				
-				&.current-menu-item a:after{@include lvs-gradient;}
-			}
-		}
-		
-	}
-
-}
-
-#solutions-menu{
-	background:$black;
-	width:100%; height:auto;
-	position:fixed; 
-	bottom:0; left:0; 
-	z-index:10;
-	font-size:70%;
-	display:none;
-	@include opacity(0,0);
-	
-	.menu{
-		width:100%; 
-		margin:0; padding:0;
-		text-align:center;
-		
-		li{
-			display:inline-block;
-			
-			a{
-				display:block;
-				padding:5px 20px;
-				color:$white;
-				
-				&:hover{@include lvs-gradient;}
-			}
-		}
-	}
-}
-
-#overlay{
-	background:#000;
-	width:100%; height:100%;
-	position:fixed;
-	top:0; left:0;
-	z-index:0;
-	@include opacity(0, 0);
-	@include defaultTransition;
-	
-	&.open{
-		@include opacity(90, .9);
-		z-index:10;
-	}
-}
-
-#contact-sidebar{
-	display:block;
-	position:fixed;
-	top:0; right:-100%;
-	width:100%;
-	max-width:500px;
-	height:100%;
-	padding:150px 50px 50px;
-	background:$white;
-	z-index:15;
-	@include defaultTransition;
-	
-	&.open{
-		display:block;
-		background:$white;
-		right:0;
-	}
-}
-
-/* =====  Footer  ===== */
-#footer{
-	@include opacity(0,0);
-	background: $lt-blue;
-}
-
-#quoteCarousel{
-	padding:50px 0;
-	
-	.image-wrapper{width:70%;}
-	
-	.quote:before{
-		content:'';
-		display:block;
-		position:absolute;
-		width:40px; height:40px;
-		left:-7px; top:-7px;
-		z-index:0;
-		background-image:url("../images/quote.png");
-		background-size:contain;
-		background-position:center center;
-		background-repeat:no-repeat;}
-	
-	h5{font-weight:bold;}
-}
-
-
 
 /* =====  Loading Bar  ===== */
 .load-bar{
@@ -214,13 +15,184 @@
 }
 
 
+/* =====  Header  ===== */
 
-/* =====  Page Specific Header + Footer Styles  ===== */
-body.home #contact-sidebar{ padding:50px; }
+#header{
+	position:fixed;
+	top:0; left:0;
+	width:100%; height:auto;
+	z-index:100;
+	background:$trans;
+	@include opacity(0,0);
+	
+	
+	/* =====  Logo  ===== */
+	#site_id{
+		margin:0;
+		display:block;
+		padding:10px 0;
+
+		g#LogicVue path{fill:$black;}
+		g#Solutions path{fill:$grey;}
+		g#mark .bottom{opacity:0.5;fill:$blue;}
+		g#mark .top{fill:$lvs-blue;}
+	}
+	
+	.menu{
+	margin:10px 0 0;
+
+		ul{
+			list-style:none;
+			text-align: right;
+			margin-right:30px;
+
+			li{
+				display:inline-block;
+
+				a{
+					text-transform:uppercase;
+					text-decoration:none;
+					font-size:80%;
+					font-weight:700;
+					letter-spacing:2px;
+					color:$black;
+					text-decoration: none;
+					
+					&:after{
+						content:'';
+						display:block;
+						position:relative;
+						background:transparent;
+						width:25px; height:4px;
+						border-radius:20px;
+						margin:8px auto;
+					}
+					
+					&:hover:after{@include lvs-gradient;}
+					
+				}
+			}
+		}
+	}
+	
+	&.open{
+		
+		#site_id{
+			width:90%; 
+			
+			g#LogicVue path{fill:$white;}
+		}
+		
+		.menu ul li a{color:$white;}
+	}
+
+}
+
+
+
+/* =====  Menu Toggle  ===== */
+#menu-toggle{
+	width:30px; height:30px;
+	position:absolute;
+	right:0; top:15px;
+	cursor:pointer;
+	
+	span{
+		position:absolute;
+		width:100%;
+		height:4px;
+		background:$black;
+		border-radius:20px;
+		margin:4px 0;
+		float:right;
+		@include defaultTransition;
+		
+		&:first-of-type{width:100%; top:0; right:0;}
+		&:last-of-type{width:65%; top:10px; right:0;}
+	}
+	
+	&:hover{
+		> span{@include lvs-gradient;}
+	}
+	
+	&.open{
+		> span{@include lvs-gradient; @include defaultTransition;}
+		> span:first-of-type{transform:rotate(-45deg); top:9px;}
+		> span:last-of-type{width:100%; transform:rotate(45deg);}
+	}
+}
+
+
+
+/* =====  Overlay Menu  ===== */
+#bg-menu-cover{
+	background:$black; 
+	width:3px; height:3px;
+	display:block;
+	z-index:99;
+	position:absolute; 
+	top:-5px; right:0;
+	transform:translateX(50%);
+	@include border-radius(50%);
+	@include transition(all, cubic-bezier(.13,.34,.81,.41), .4s);
+	
+	&.open{
+		background:$black;
+		transform:scale(2000, 2000);
+	}
+}
+
+#bg-menu{
+	position:fixed;
+	top:150px; left:0;
+	width:100%; height:100%;
+	z-index:100;
+	display:none;
+	
+	&.open{display:block;}
+	
+	.col{display:none;}
+	
+	a,p,h1,h2,h3,h4,h5{color:$white;}
+	h2{font-size:200%;}
+	
+	ul{
+		margin-top:25px;
+		list-style:none;
+		
+		li{
+			a{
+				font-size:250%; 
+				font-weight:700;
+				text-decoration:none;
+			}
+			
+			&:hover > a{color:$white; padding-left:20px;}
+			&:hover ~ li:not(:hover) > a{color:rgba(255,255,255,.15);}
+		}
+	}
+}
+
+
+/* =====  Overlay Menu  ===== */
+#solutions-menu{
+	background:$black;
+	width:100%; height:auto;
+	position:fixed; 
+	bottom:0; left:0; 
+	z-index:10;
+	font-size:70%;
+	display:none;
+	@include opacity(0,0);
+}
+
+
 
 body.body{ 
-	#header{background: $white; @include defaultShadow; }
 	#menu-toggle span{background: $black;}
 	#menu-toggle:hover > span{@include lvs-gradient;}
 	#solutions-menu{top:90px; left:0; bottom:auto; font-size:90%;}
 }
+/* ==========================================
+	Footer
+========================================== */
